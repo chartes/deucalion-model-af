@@ -4,7 +4,7 @@ RUN mkdir /app
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y zip python3.6 python3.6-dev python3-venv python3-pip
-ADD https://github.com/PonteIneptique/pie/archive/webapp.zip ./
+ADD https://github.com/mikekestemont/pie/archive/dev.zip ./
 RUN unzip webapp.zip && mv -f ./pie-webapp/* ./ && rm -rf pie-webapp
 
 RUN python3.6 -m venv venv

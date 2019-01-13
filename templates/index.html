@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png')}}">
+
+    <title>Deucalion Pie WebApp</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <style type="text/css">
+        h1 { color:rgb(189, 5, 45); }
+        .navbar-dark, .btn-primary { background-color : rgb(189, 5, 45)!important; border-color: rgb(189, 5, 45)!important; }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark"><a href="{{url_for('.form')}}" class="navbar-brand">Deucalion</a></nav>
+    <div class="container d-flex w-100 h-100 p-3 flex-column">
+      <main role="main">
+          <h1>Tag your text</h1>
+          <form class="form" action="{{ url_for('.lemmatize') }}" method="POST">
+              <div class="form-group row">
+                  <label for="data" class="col-3">Input text</label>
+                  <div class="col-9">
+                      <textarea required id="data" name="data" class="form-control" rows="7"></textarea>
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-lg btn-primary">Tag !</button>
+          </form>
+      </main>
+    </div>
+
+  </body>
+</html>

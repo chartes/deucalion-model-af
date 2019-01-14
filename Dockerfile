@@ -15,15 +15,15 @@ COPY flaskapp.py model.tar boot.sh ./
 RUN chmod +x boot.sh
 
 # Download and install
-ADD https://github.com/ponteineptique/pie/archive/webapp-customization.zip ./
-RUN unzip webapp-customization.zip && mv -f ./pie-webapp-customization/* ./ && rm -rf pie-webapp-customization
+ADD https://github.com/emanjavacas/pie/archive/v0.1.1.zip ./
+RUN unzip v0.1.1.zip && mv -f ./pie-0.1.1/* ./ && rm -rf pie-0.1.1
 
 # Install Pie and Pie Webapp requirements
 RUN pip3 install -r requirements.txt
 RUN pip3 install -r requirements-app.txt
 
 # Small checkup
-RUN ls
+# RUN ls
 
 ENV PIE_MODEL /app/model.tar
 

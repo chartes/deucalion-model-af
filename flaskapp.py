@@ -53,7 +53,7 @@ def form():
 
 
 class GlueFormatter(Formatter):
-    HEADERS = ["token", "lemma", "POS", "morph"]
+    HEADERS = ["form", "lemma", "POS", "morph"]
     MORPH_PART = ["MODE", "TEMPS", "PERS.", "NOMB.", "GENRE", "CAS", "DEGRE"]
     PONCTU = re.compile("\W")
 

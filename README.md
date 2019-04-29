@@ -16,9 +16,17 @@ The model is based on  :
 - Geste: un corpus de chansons de geste, dir. Jean-Baptiste Camps, avec la collab. d'Elena Albarran, Alice Cochet & Lucence Ing, Paris, 2016, http://github.com/Jean-Baptiste-Camps/Geste.
 - Edition nativement numérique du recueil hagiographique "Li Seint Confessor" de Wauchier de Denain d'après le manuscrit 412 de la Bibliothèque nationale de France, Ariane Pinche, Lyon, Encours
 	- Only Dialogues and La vie de Saint Martin are used right now. Data are closed source until publication of the PhD thesis.
+- Data from the Code [*Need more details*]
 
-For more details about the errors, see [CONFUSION.md](CONFUSION.md)
+# Error you can expect
 
+If you want to have an idea about the errors the model can do, please have a look at [this file for lemma and POS](Confusion.lemma.pos.md) and [this file for morph](Confusion.morph.md)
+
+## Example
+
+This was run on a text that was not seen during training : 
+
+![](example.png)
 
 # Install
 

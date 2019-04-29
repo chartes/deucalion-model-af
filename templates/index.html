@@ -22,7 +22,7 @@
     <div class="container d-flex w-100 h-100 p-3 flex-column">
       <main role="main">
           <h1>Tag your text</h1>
-          <form class="form" action="{{ url_for('.lemmatize') }}" method="POST">
+          <form class="form" action="{{ url_for('nlp_pie.main') }}" method="POST">
               <div class="form-group row">
                   <label for="data" class="col-3">Input text</label>
                   <div class="col-9">

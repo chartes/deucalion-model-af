@@ -21,7 +21,9 @@ uppercase = re.compile("^[A-Z]$")
 class GlueFormatter(Formatter):
     HEADERS = ["form", "lemma", "POS", "morph"]
     MORPH_PART = ["MODE", "TEMPS", "PERS.", "NOMB.", "GENRE", "CAS", "DEGRE"]
-    PONCTU = re.compile("\W")
+    PONCTU = re.compile("\W+")
+    NUMBER = re.compile("\d+")
+    PONFORT = [".", "...", "!", "?"]
 
     def __init__(self, tasks):
         super(GlueFormatter, self).__init__(tasks)
@@ -35,8 +37,21 @@ class GlueFormatter(Formatter):
     def format_line(self, token, tags):
         tags = list(tags)
         lemma = tags[self.tasks.index("lemma")]
-        if GlueFormatter.PONCTU.match(lemma):
+        if GlueFormatter.PONCTU.match(token):
             lemma = token
+            if token in GlueFormatter.PONFORT:
+                pos = "PONfrt"
+            else:
+                pos = "PONfbl"
+            return [
+                token,
+                lemma,
+                pos,
+                "MORPH=empty"
+            ]
+        elif GlueFormatter.NUMBER.match(token):
+            lemma = token
+            tags[self.tasks.index(self.pos_tag)] = "ADJcar"
 
         return [
             token,

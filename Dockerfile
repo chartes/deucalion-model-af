@@ -1,4 +1,4 @@
-FROM ponteineptique/pie-flask:v0.0.1
+FROM ponteineptique/pie-flask:v0.0.2
 
 # Add local files
 COPY ./ ./

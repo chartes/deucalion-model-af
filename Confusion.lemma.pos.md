@@ -2,1418 +2,1245 @@ Confusion tables
 ================
 
 - [Lemma](#lemma)
-- [POS ](#pos-)
+- [POS ](#pos)
 
 # Lemma
 
-```
+
 all:
-  accuracy: 0.9638
-  precision: 0.7123
-  recall: 0.7089
-  support: 48317
+  accuracy: 0.9696
+  precision: 0.7547
+  recall: 0.7558
+  support: 50379
 ambiguous-tokens:
   accuracy: 0.9665
-  precision: 0.7585
-  recall: 0.7643
-  support: 27844
+  precision: 0.8003
+  recall: 0.8011
+  support: 26217
 unknown-targets:
-  accuracy: 0.729
-  precision: 0.2685
-  recall: 0.2603
-  support: 1236
+  accuracy: 0.7576
+  precision: 0.3295
+  recall: 0.3295
+  support: 1242
 unknown-tokens:
-  accuracy: 0.6429
-  precision: 0.429
-  recall: 0.4249
-  support: 1792
-  ```
+  accuracy: 0.6921
+  precision: 0.4912
+  recall: 0.4966
+  support: 1627
 
-| Expected         | Total Errors | Predictions   | Predicted times |
-|------------------|--------------|---------------|-----------------|
-| que2             | 86           | que4          | 79              |
-|                  |              | que3          | 4               |
-|                  |              | que1          | 2               |
-|                  |              | qui           | 1               |
-| que4             | 64           | que2          | 56              |
-|                  |              | que1          | 5               |
-|                  |              | que3          | 3               |
-| segm             | 49           | ne2           | 2               |
-|                  |              | sen2          | 2               |
-|                  |              | loi3          | 2               |
-|                  |              | legier2       | 2               |
-|                  |              | son4          | 2               |
-|                  |              | contreval     | 1               |
-|                  |              | il            | 1               |
-|                  |              | agrant        | 1               |
-|                  |              | nuire         | 1               |
-|                  |              | ore3          | 1               |
-|                  |              | logros        | 1               |
-|                  |              | enchantement  | 1               |
-|                  |              | le+eschëur    | 1               |
-|                  |              | lacier        | 1               |
-|                  |              | negraise      | 1               |
-|                  |              | que_que       | 1               |
-|                  |              | pendre        | 1               |
-|                  |              | principal     | 1               |
-|                  |              | a3            | 1               |
-|                  |              | val1          | 1               |
-|                  |              | girbert       | 1               |
-|                  |              | cest          | 1               |
-|                  |              | ça            | 1               |
-|                  |              | lorgueil      | 1               |
-|                  |              | charles       | 1               |
-|                  |              | avoir         | 1               |
-|                  |              | estre1        | 1               |
-|                  |              | ome           | 1               |
-|                  |              | enragier      | 1               |
-|                  |              | lencron       | 1               |
-|                  |              | nen1          | 1               |
-|                  |              | negraiment    | 1               |
-|                  |              | entracoit     | 1               |
-|                  |              | leschis       | 1               |
-|                  |              | secrir        | 1               |
-|                  |              | loglëor       | 1               |
-|                  |              | eschaper      | 1               |
-|                  |              | mauaire       | 1               |
-|                  |              | monois        | 1               |
-|                  |              | emperëor      | 1               |
-|                  |              | saisir        | 1               |
-|                  |              | dorm          | 1               |
-|                  |              | lesu1         | 1               |
-|                  |              | ne1           | 1               |
-| avoir            | 41           | a3            | 23              |
-|                  |              | öir           | 6               |
-|                  |              | a3+le         | 4               |
-|                  |              | häir          | 3               |
-|                  |              | avuec         | 2               |
-|                  |              | aucai         | 2               |
-|                  |              | estre1        | 1               |
-| il               | 35           | le            | 26              |
-|                  |              | là            | 4               |
-|                  |              | je            | 2               |
-|                  |              | lors          | 1               |
-|                  |              | aler          | 1               |
-|                  |              | i2            | 1               |
-| que1             | 34           | que4          | 33              |
-|                  |              | que2          | 1               |
-| ne2              | 27           | ne1           | 27              |
-| le               | 24           | il            | 20              |
-|                  |              | là            | 3               |
-|                  |              | lez           | 1               |
-| se               | 22           | si            | 12              |
-|                  |              | soi1          | 6               |
-|                  |              | ce1           | 2               |
-|                  |              | segm          | 1               |
-|                  |              | son4          | 1               |
-| ne1              | 20           | ne2           | 20              |
-| si               | 16           | soi1          | 8               |
-|                  |              | se            | 6               |
-|                  |              | son4          | 1               |
-|                  |              | si+il         | 1               |
-| a3               | 14           | avoir         | 14              |
-| donc             | 13           | dont          | 12              |
-|                  |              | don           | 1               |
-| öir              | 13           | avoir         | 9               |
-|                  |              | oir           | 3               |
-|                  |              | olir          | 1               |
-| vivre1           | 12           | vëoir         | 9               |
-|                  |              | vif           | 1               |
-|                  |              | vire1         | 1               |
-|                  |              | vis1          | 1               |
-| ''''             | 11           |               | 11              |
-| o3               | 10           | où            | 7               |
-|                  |              | en1+le        | 2               |
-|                  |              | avoir         | 1               |
-| que3             | 10           | que4          | 6               |
-|                  |              | que2          | 4               |
-| en1              | 9            | en2           | 6               |
-|                  |              | on            | 2               |
-|                  |              | an            | 1               |
-| estre1           | 9            | avoir         | 3               |
-|                  |              | ester         | 1               |
-|                  |              | segm          | 1               |
-|                  |              | vëoir         | 1               |
-|                  |              | savoir        | 1               |
-|                  |              | estovoir1     | 1               |
-|                  |              | sus           | 1               |
-| prodome          | 9            | pro           | 9               |
-| ainz             | 9            | ainc          | 9               |
-| soi1             | 9            | se            | 5               |
-|                  |              | si            | 2               |
-|                  |              | son4          | 2               |
-| ester            | 9            | estre1        | 5               |
-|                  |              | estovoir1     | 3               |
-|                  |              | esté1         | 1               |
-| en2              | 9            | en1           | 5               |
-|                  |              | on            | 3               |
-|                  |              | segm          | 1               |
-| entre            | 9            | entre2        | 9               |
-| savoir           | 8            | suen          | 2               |
-|                  |              | sachier2      | 1               |
-|                  |              | sacrer        | 1               |
-|                  |              | sec           | 1               |
-|                  |              | sëu           | 1               |
-|                  |              | sot           | 1               |
-|                  |              | set           | 1               |
-| qui              | 8            | que4          | 4               |
-|                  |              | que2          | 3               |
-|                  |              | cui           | 1               |
-| vëoir            | 8            | aler          | 3               |
-|                  |              | vair1         | 1               |
-|                  |              | avoir         | 1               |
-|                  |              | voloir        | 1               |
-|                  |              | venir         | 1               |
-|                  |              | vos           | 1               |
-| sëel2            | 7            | sëel1         | 6               |
-|                  |              | saiel         | 1               |
-| où               | 7            | o3            | 7               |
-| saint1           | 7            | saint         | 7               |
-| là               | 7            | le            | 4               |
-|                  |              | il            | 3               |
-|                  | 7            | ''''          | 6               |
-|                  |              | ascamnit      | 1               |
-| bien2            | 6            | bien1         | 6               |
-| vos              | 6            | vostre        | 3               |
-|                  |              | il            | 1               |
-|                  |              | ost           | 1               |
-|                  |              | oste          | 1               |
-| avenir           | 6            | avenant       | 6               |
-| en1+le           | 6            | o3            | 2               |
-|                  |              | il            | 1               |
-|                  |              | où            | 1               |
-|                  |              | estre1        | 1               |
-|                  |              | o4            | 1               |
-| ce1              | 6            | se            | 3               |
-|                  |              | ce2           | 3               |
-| ce2              | 5            | ce1           | 3               |
-|                  |              | son4          | 1               |
-|                  |              | se            | 1               |
-| vif              | 5            | vis1          | 2               |
-|                  |              | vil           | 1               |
-|                  |              | uis           | 1               |
-|                  |              | vëoir         | 1               |
-| conte1           | 5            | conte2        | 3               |
-|                  |              | conter        | 2               |
-| son4             | 5            | si            | 3               |
-|                  |              | sui           | 1               |
-|                  |              | lor2          | 1               |
-| mort             | 5            | morir         | 4               |
-|                  |              | mors1         | 1               |
-| cest             | 4            | ce2           | 3               |
-|                  |              | cel           | 1               |
-| bruire           | 4            | bruiant2      | 2               |
-|                  |              | bruit         | 1               |
-|                  |              | brisier       | 1               |
-| once2            | 4            | onque         | 2               |
-|                  |              | oncevoir      | 1               |
-|                  |              | onceve        | 1               |
-| chevrueil        | 4            | chevrel       | 4               |
-| aidier           | 4            | äie           | 2               |
-|                  |              | avoir         | 2               |
-| non              | 4            | nom           | 3               |
-|                  |              | num           | 1               |
-| aler             | 4            | avoir         | 1               |
-|                  |              | ire           | 1               |
-|                  |              | vëoir         | 1               |
-|                  |              | eslire        | 1               |
-| plaire           | 4            | plait         | 3               |
-|                  |              | plaisir       | 1               |
-| char1            | 4            | char2         | 4               |
-| dieu             | 4            | deus          | 2               |
-|                  |              | devoir        | 2               |
-| laissier         | 4            | vëoir         | 1               |
-|                  |              | laiier2       | 1               |
-|                  |              | le            | 1               |
-|                  |              | lais          | 1               |
-| tref1            | 4            | tref2         | 4               |
-| ferir            | 3            | faire         | 2               |
-|                  |              | fief          | 1               |
-| lez              | 3            | le            | 1               |
-|                  |              | il            | 1               |
-|                  |              | lever         | 1               |
-| pel1             | 3            | pel2          | 2               |
-|                  |              | pue           | 1               |
-| pöoir            | 3            | poissant      | 2               |
-|                  |              | puis          | 1               |
-| warochier        | 3            | warchëoir     | 3               |
-| tant             | 3            | atant         | 1               |
-|                  |              | tens          | 1               |
-|                  |              | tendre1       | 1               |
-| sëoir            | 3            | savoir        | 1               |
-|                  |              | saisir        | 1               |
-|                  |              | estre1        | 1               |
-| arbre            | 3            | arbe          | 2               |
-|                  |              | erbe          | 1               |
-| afaire1          | 3            | afaire2       | 3               |
-| revenir          | 3            | röeir2        | 1               |
-|                  |              | reuvoir1      | 1               |
-|                  |              | reuvrer       | 1               |
-| nos1             | 3            | nul           | 2               |
-|                  |              | nostre        | 1               |
-| on               | 3            | en2           | 2               |
-|                  |              | en1           | 1               |
-| entaschier       | 3            | entachier     | 3               |
-| tendre1          | 3            | tendre2       | 2               |
-|                  |              | tenir1        | 1               |
-| vostre           | 3            | vos           | 3               |
-| feste            | 3            | feste1        | 3               |
-| devoir           | 3            | duire         | 1               |
-|                  |              | douz          | 1               |
-|                  |              | doi           | 1               |
-| pesance          | 3            | poissance     | 3               |
-| seignier         | 3            | saignier      | 3               |
-| sor2             | 3            | sus           | 3               |
-| cuire            | 3            | cuidier1      | 3               |
-| cort2            | 3            | corir         | 1               |
-|                  |              | cort1         | 1               |
-|                  |              | cortois       | 1               |
-| servir           | 3            | serorir       | 1               |
-|                  |              | seror         | 1               |
-|                  |              | seroriu       | 1               |
-| je               | 3            | i2            | 2               |
-|                  |              | mi2           | 1               |
-| cui              | 3            | qui           | 3               |
-| perdre           | 3            | pardoner      | 1               |
-|                  |              | pordrir       | 1               |
-|                  |              | por2          | 1               |
-| peser            | 3            | paistre       | 2               |
-|                  |              | poissant      | 1               |
-| o4               | 3            | o3            | 2               |
-|                  |              | où            | 1               |
-| tor2             | 3            | tort2         | 2               |
-|                  |              | tor5          | 1               |
-| icest            | 3            | icel          | 1               |
-|                  |              | cel           | 1               |
-|                  |              | ice2          | 1               |
-| moillier1        | 3            | moillier2     | 3               |
-| pere             | 3            | pere1         | 3               |
-| salir1           | 3            | salir2        | 3               |
-| ez               | 3            | et            | 1               |
-|                  |              | ester         | 1               |
-|                  |              | estre1        | 1               |
-| cel              | 3            | cil           | 2               |
-|                  |              | quel1         | 1               |
-| traire           | 3            | träir         | 3               |
-| avant            | 3            | autant        | 3               |
-| nu1              | 3            | nul           | 2               |
-|                  |              | nüe           | 1               |
-| alier            | 3            | aliier        | 2               |
-|                  |              | alix          | 1               |
-| porsëoir2        | 3            | porsener      | 2               |
-|                  |              | porsenor      | 1               |
-| venir            | 3            | venüe         | 1               |
-|                  |              | uenir         | 1               |
-|                  |              | vain          | 1               |
-| forsenerie       | 3            | forcoine      | 1               |
-|                  |              | forfoidiere   | 1               |
-|                  |              | forcenie      | 1               |
-| sor1             | 2            | sort2         | 1               |
-|                  |              | sor2          | 1               |
-| tenir1           | 2            | tendre1       | 2               |
-| complaindre      | 2            | complamner    | 1               |
-|                  |              | comploiier    | 1               |
-| theoniste        | 2            | theodoise     | 1               |
-|                  |              | thenois       | 1               |
-| culvert          | 2            | cuir          | 1               |
-|                  |              | guivret       | 1               |
-| autel2           | 2            | autel1        | 2               |
-| pris1            | 2            | prendre       | 2               |
-| garir            | 2            | garder        | 2               |
-| jesir            | 2            | jeter         | 2               |
-| coper            | 2            | çoper         | 1               |
-|                  |              | cope1         | 1               |
-| essaucier        | 2            | eshaucier     | 2               |
-| apercevoir       | 2            | espardre      | 1               |
-|                  |              | esparchier    | 1               |
-| soudre           | 2            | soillier      | 1               |
-|                  |              | soloir        | 1               |
-| encontre2        | 2            | encontre1     | 2               |
-| doze+mil1        | 2            | trente+mil1   | 1               |
-|                  |              | trois+mil1    | 1               |
-| seignor          | 2            | sainté        | 1               |
-|                  |              | saintëé       | 1               |
-| plenierement     | 2            | plenier1      | 2               |
-| desesperer       | 2            | dessevrer     | 2               |
-| dunemarche       | 2            | ducarne       | 1               |
-|                  |              | ducarn        | 1               |
-| pur              | 2            | por2          | 2               |
-| mon1             | 2            | je            | 1               |
-|                  |              | mais1         | 1               |
-| césar            | 2            | cesar         | 2               |
-| forment          | 2            | forment2      | 2               |
-| suen             | 2            | son4          | 2               |
-| bëer             | 2            | baillier      | 2               |
-| maxime           | 2            | maumetre      | 1               |
-|                  |              | maximien      | 1               |
-| denis            | 2            | saint-denis   | 1               |
-|                  |              | dinis         | 1               |
-| crüauté          | 2            | crüaleté      | 2               |
-| parrain          | 2            | parein        | 1               |
-|                  |              | parin         | 1               |
-| mil1             | 2            | metre2        | 1               |
-|                  |              | milieu        | 1               |
-| suscription      | 2            | sosprocier    | 1               |
-|                  |              | sochier       | 1               |
-| metre2           | 2            | mëisme        | 1               |
-|                  |              | jeter         | 1               |
-| mais1            | 2            | mon1          | 2               |
-| i2               | 2            | un            | 2               |
-| longement2       | 2            | longement     | 2               |
-| jeter            | 2            | geter         | 1               |
-|                  |              | gaitier       | 1               |
-| prevost          | 2            | prevoste      | 2               |
-| sivre            | 2            | savoir        | 2               |
-| martel           | 2            | martois       | 1               |
-|                  |              | martire2      | 1               |
-| comporter        | 2            | comparer2     | 2               |
-| vers2            | 2            | ventre1       | 2               |
-| espiet           | 2            | espee         | 1               |
-|                  |              | espie3        | 1               |
-| ha!              | 2            | häir          | 2               |
-| brice            | 2            | briciton      | 1               |
-|                  |              | bricet        | 1               |
-| depecier         | 2            | despechier    | 2               |
-| jöir             | 2            | jöer          | 2               |
-| saint            | 2            | sentir        | 1               |
-|                  |              | sans          | 1               |
-| don              | 2            | dont          | 1               |
-|                  |              | donc          | 1               |
-| foi              | 2            | foiz          | 2               |
-| poiz             | 2            | poing         | 2               |
-| an               | 2            | en2           | 1               |
-|                  |              | on            | 1               |
-| feindre          | 2            | fendre        | 1               |
-|                  |              | feinte        | 1               |
-| pon2             | 2            | pont          | 2               |
-| sen2             | 2            | sanc          | 2               |
-| lé               | 2            | lez           | 1               |
-|                  |              | lait1         | 1               |
-| cri              | 2            | mois          | 2               |
-| secorer          | 2            | secors        | 1               |
-|                  |              | secorre1      | 1               |
-| vile             | 2            | uile          | 2               |
-| reims            | 2            | roint1        | 1               |
-|                  |              | raim          | 1               |
-| gent2            | 2            | gent1         | 2               |
-| covenant         | 2            | conoistre     | 1               |
-|                  |              | covenancier1  | 1               |
-| chierir          | 2            | chëoir        | 1               |
-|                  |              | chier         | 1               |
-| vendre           | 2            | venir         | 2               |
-| tesmoignage      | 2            | tesmoigne     | 2               |
-| tinel1           | 2            | tinte         | 2               |
-| cheval           | 2            | chevel        | 1               |
-|                  |              | chievre       | 1               |
-| porsivre         | 2            | porsentir     | 1               |
-|                  |              | porsevoir     | 1               |
-| vëer             | 2            | vëoir         | 2               |
-| gent1            | 2            | gant          | 1               |
-|                  |              | gent2         | 1               |
-| besoignier       | 2            | besoigne      | 2               |
-| quinze           | 2            | quint         | 2               |
-| veintre          | 2            | vestir        | 1               |
-|                  |              | vivre1        | 1               |
-| par              | 2            | por2          | 2               |
-| consirer         | 2            | conseignier   | 1               |
-|                  |              | consirrer     | 1               |
-| di               | 2            | dis1          | 2               |
-| charnel2         | 2            | charnel       | 2               |
-| escrïer          | 2            | encröer       | 1               |
-|                  |              | escrire       | 1               |
-| or4              | 2            | ore3          | 1               |
-|                  |              | or1           | 1               |
-| mauvaisement     | 2            | mauvais       | 2               |
-| sachier2         | 2            | savoir        | 2               |
-| cuidier1         | 2            | quiter        | 2               |
-| veraiement       | 2            | iroiament     | 1               |
-|                  |              | verai         | 1               |
-| mëur             | 2            | maubre        | 1               |
-|                  |              | movoir        | 1               |
-| tot              | 2            | tost1         | 2               |
-| veillier2        | 2            | voloir        | 2               |
-| ore3             | 2            | or4           | 2               |
-| durer            | 2            | dur           | 2               |
-| lieue            | 2            | lié1          | 1               |
-|                  |              | lieu          | 1               |
-| solement         | 2            | solement2     | 2               |
-| privé1           | 2            | priveement    | 1               |
-|                  |              | priver        | 1               |
-| repondre         | 2            | repost        | 2               |
-| espargnance      | 2            | espargatie    | 1               |
-|                  |              | espartance    | 1               |
-| partir           | 2            | part1         | 1               |
-|                  |              | partie        | 1               |
-| pere1            | 2            | pere          | 2               |
-| paistre          | 2            | peser         | 2               |
-| près             | 2            | près+que      | 2               |
-| conter           | 2            | conte1        | 2               |
-| tolir            | 2            | tot           | 2               |
-| tens             | 2            | tant          | 2               |
-| defendre         | 2            | ceinture      | 1               |
-|                  |              | defendëor     | 1               |
-| intencïon        | 2            | entencïon     | 2               |
-| plate            | 2            | plat          | 2               |
-| comunaument      | 2            | comunement    | 1               |
-|                  |              | comunement2   | 1               |
-| laidengier       | 2            | landigïon     | 1               |
-|                  |              | landeviner    | 1               |
-| pais             | 2            | poi           | 1               |
-|                  |              | päis          | 1               |
-| lumbardie        | 2            | lamberie      | 1               |
-|                  |              | lonbardie     | 1               |
-| comunauté        | 2            | comunité      | 1               |
-|                  |              | comuniter     | 1               |
-| afoler1          | 2            | afoler2       | 2               |
-| bofu             | 2            | bouz          | 2               |
-| estrangier2      | 2            | estragier     | 2               |
-| dotance          | 2            | de+le         | 1               |
-|                  |              | tence         | 1               |
-| changier         | 2            | chargier      | 1               |
-|                  |              | chancier1     | 1               |
-| entrer           | 2            | entre2        | 1               |
-|                  |              | entree        | 1               |
-| cors1            | 2            | cort1         | 2               |
-| faim             | 2            | fein          | 1               |
-|                  |              | feindre       | 1               |
-| chiere           | 2            | chier         | 2               |
-| morel1           | 2            | moral         | 1               |
-|                  |              | morsel        | 1               |
-| dis1             | 2            | dit           | 1               |
-|                  |              | di            | 1               |
-| a3+le            | 2            | il            | 1               |
-|                  |              | o3            | 1               |
-| rachater         | 1            | recanter      | 1               |
-| turnevent        | 1            | torner        | 1               |
-| enui             | 1            | enoiier       | 1               |
-| boban            | 1            | boner         | 1               |
-| vigne1           | 1            | venir         | 1               |
-| baillie          | 1            | balais2       | 1               |
-| agencir          | 1            | agenoillier   | 1               |
-| depopler         | 1            | depeler       | 1               |
-| chargier         | 1            | changier      | 1               |
-| essuier          | 1            | essuiier      | 1               |
-| respasser        | 1            | repasser      | 1               |
-| montee           | 1            | monter        | 1               |
-| espondre         | 1            | espostire2    | 1               |
-| graine           | 1            | grenain       | 1               |
-| flote3           | 1            | flot2         | 1               |
-| vassal           | 1            | vassel        | 1               |
-| ost              | 1            | avoir         | 1               |
-| sengler          | 1            | cengler       | 1               |
-| mostrer          | 1            | montre        | 1               |
-| ne1+il           | 1            | nos1          | 1               |
-| boivre           | 1            | boisier2      | 1               |
-| sis2             | 1            | vëoir         | 1               |
-| verser1          | 1            | aversier      | 1               |
-| amaigrir         | 1            | amener        | 1               |
-| ovrer            | 1            | ovrir         | 1               |
-| nom              | 1            | non           | 1               |
-| heaume           | 1            | ame           | 1               |
-| alemaigne        | 1            | alemant       | 1               |
-| efrené           | 1            | esfrëer       | 1               |
-| häir             | 1            | häi!          | 1               |
-| jöe              | 1            | joie          | 1               |
-| joier            | 1            | jovier        | 1               |
-| es2              | 1            | estre1        | 1               |
-| erepuis          | 1            | arpumius      | 1               |
-| le_mans          | 1            | manc1         | 1               |
-| vistece          | 1            | vistice       | 1               |
-| löer2            | 1            | loiier        | 1               |
-| voutiz           | 1            | volter        | 1               |
-| amertume         | 1            | amer1         | 1               |
-| partot           | 1            | tort1         | 1               |
-| deus             | 1            | dieu          | 1               |
-| assez            | 1            | essez         | 1               |
-| toute            | 1            | toste1        | 1               |
-| reconjöir        | 1            | reconoistre   | 1               |
-| parthenie        | 1            | partir        | 1               |
-| establer1        | 1            | estable1      | 1               |
-| cremetos         | 1            | crever        | 1               |
-| covoitos         | 1            | covoitier     | 1               |
-| guerredoner      | 1            | guerdir       | 1               |
-| eschignier       | 1            | eschiner      | 1               |
-| regne            | 1            | ragent        | 1               |
-| font1            | 1            | fonz          | 1               |
-| mulot2           | 1            | mol           | 1               |
-| ambler           | 1            | embler        | 1               |
-| repairier        | 1            | repaire       | 1               |
-| vint             | 1            | venir         | 1               |
-| milier           | 1            | milien        | 1               |
-| issir            | 1            | espoir2       | 1               |
-| nercir           | 1            | mercïer       | 1               |
-| bret             | 1            | brief         | 1               |
-| taillëor         | 1            | taillier1     | 1               |
-| regenerer        | 1            | regnerrer     | 1               |
-| benefice         | 1            | benivor       | 1               |
-| sidre            | 1            | sivre         | 1               |
-| tornement        | 1            | tornoiement   | 1               |
-| penser           | 1            | pensé         | 1               |
-| garlain          | 1            | garlan        | 1               |
-| aive             | 1            | avoir         | 1               |
-| mordrir          | 1            | morir         | 1               |
-| encens           | 1            | ancessor      | 1               |
-| mirre            | 1            | mire1         | 1               |
-| alöé             | 1            | alöer1        | 1               |
-| entr'acoler      | 1            | entreconder   | 1               |
-| soie3            | 1            | soie2         | 1               |
-| former           | 1            | fermer        | 1               |
-| piz              | 1            | pis1          | 1               |
-| justin           | 1            | justicin      | 1               |
-| tu               | 1            | ton4          | 1               |
-| demincier        | 1            | demencier     | 1               |
-| lait1            | 1            | laidengier    | 1               |
-| quel1            | 1            | conte1        | 1               |
-| ardoise          | 1            | atoise        | 1               |
-| fauz             | 1            | faus          | 1               |
-| vair1            | 1            | vair2         | 1               |
-| lïemier          | 1            | liemier       | 1               |
-| errer1           | 1            | errer2        | 1               |
-| desmembrer       | 1            | demener       | 1               |
-| tarse            | 1            | therrain      | 1               |
-| cilicie          | 1            | clices        | 1               |
-| arme             | 1            | ame           | 1               |
-| esteler2         | 1            | estele2       | 1               |
-| nef2             | 1            | nés           | 1               |
-| barbé            | 1            | berbert       | 1               |
-| noise            | 1            | noiz          | 1               |
-| retronçoner      | 1            | retrover      | 1               |
-| entr'avenir      | 1            | entrevenir    | 1               |
-| fil2             | 1            | fi2           | 1               |
-| sorcuidier       | 1            | sordoiier     | 1               |
-| soissons         | 1            | saison        | 1               |
-| iretier1         | 1            | ireté         | 1               |
-| tor5             | 1            | tor2          | 1               |
-| desireter        | 1            | desirrir      | 1               |
-| roincevaux       | 1            | rocelut       | 1               |
-| arcevesque       | 1            | escrevesque   | 1               |
-| öil              | 1            | o3            | 1               |
-| chose            | 1            | cause         | 1               |
-| corir            | 1            | cort1         | 1               |
-| uef              | 1            | ost           | 1               |
-| desclore         | 1            | desclöer      | 1               |
-| essaiement       | 1            | assasiier     | 1               |
-| alemele          | 1            | lame          | 1               |
-| combatëor        | 1            | combatre      | 1               |
-| chaser           | 1            | chacier       | 1               |
-| pré              | 1            | prè           | 1               |
-| florir           | 1            | forir         | 1               |
-| ice2             | 1            | ice1          | 1               |
-| autel1           | 1            | autel2        | 1               |
-| desfaire         | 1            | desferrer     | 1               |
-| trüant           | 1            | träin         | 1               |
-| enz              | 1            | an            | 1               |
-| esperit          | 1            | espirter      | 1               |
-| omage            | 1            | umage         | 1               |
-| prisier          | 1            | premier       | 1               |
-| esforcement2     | 1            | esforcement1  | 1               |
-| livrer           | 1            | lire1         | 1               |
-| cendal           | 1            | cender        | 1               |
-| perrin           | 1            | parin         | 1               |
-| prïor            | 1            | priier        | 1               |
-| esclavon         | 1            | esclavont     | 1               |
-| apert            | 1            | apert1        | 1               |
-| mès              | 1            | mais1         | 1               |
-| envers2          | 1            | envers1       | 1               |
-| pel2             | 1            | pel1          | 1               |
-| veine1           | 1            | voine1        | 1               |
-| un               | 1            | i2            | 1               |
-| curçuse          | 1            | curcevauche   | 1               |
-| esperdre         | 1            | espardre      | 1               |
-| ja               | 1            | je            | 1               |
-| vergoignier      | 1            | vergonder     | 1               |
-| dïemaine         | 1            | dïamence      | 1               |
-| paste            | 1            | pasté         | 1               |
-| mäaille          | 1            | maille        | 1               |
-| ail              | 1            | aigue         | 1               |
-| mier             | 1            | mer           | 1               |
-| comant           | 1            | comander      | 1               |
-| destruire        | 1            | destruit      | 1               |
-| aorer2           | 1            | avoir         | 1               |
-| delivrer         | 1            | delivre1      | 1               |
-| cartage          | 1            | carthage      | 1               |
-| desäerdre        | 1            | desaraierder  | 1               |
-| covenir          | 1            | cevenir       | 1               |
-| marrir           | 1            | morir         | 1               |
-| gironville       | 1            | girondelon    | 1               |
-| escïent          | 1            | icïant        | 1               |
-| chevelu          | 1            | chevel        | 1               |
-| venjance         | 1            | voingne       | 1               |
-| douz             | 1            | doze          | 1               |
-| soigle           | 1            | soille        | 1               |
-| aspremont        | 1            | asprement     | 1               |
-| oriflor          | 1            | orfrois       | 1               |
-| iseut            | 1            | ysout         | 1               |
-| si+en2           | 1            | signe         | 1               |
-| cant2            | 1            | cantque       | 1               |
-| recevoir         | 1            | recu          | 1               |
-| sire2            | 1            | serrer        | 1               |
-| franchiser       | 1            | franchir      | 1               |
-| juene            | 1            | joble         | 1               |
-| desrompre        | 1            | despromer     | 1               |
-| vengier          | 1            | veignier      | 1               |
-| fein             | 1            | faim          | 1               |
-| fuerre1          | 1            | fuerre2       | 1               |
-| ametre           | 1            | ami           | 1               |
-| empreu           | 1            | emprès        | 1               |
-| loing            | 1            | loint         | 1               |
-| code             | 1            | cote1         | 1               |
-| faire            | 1            | ferir         | 1               |
-| moller           | 1            | moudre1       | 1               |
-| plaidier1        | 1            | plaidier2     | 1               |
-| duel             | 1            | duc2          | 1               |
-| ui               | 1            | öir           | 1               |
-| buire1           | 1            | buir          | 1               |
-| barné            | 1            | berne         | 1               |
-| viron1           | 1            | viron         | 1               |
-| sautier2         | 1            | saitier       | 1               |
-| conduire         | 1            | conduit       | 1               |
-| vivus            | 1            | vilus         | 1               |
-| cercler          | 1            | cercle        | 1               |
-| chöe             | 1            | chose         | 1               |
-| devenir          | 1            | servir        | 1               |
-| governëor        | 1            | governaire    | 1               |
-| sel1             | 1            | si+il         | 1               |
-| jugement         | 1            | ivelment      | 1               |
-| desfïer          | 1            | defiser       | 1               |
-| comprendre       | 1            | comparer2     | 1               |
-| torbe1           | 1            | torbe2        | 1               |
-| despaner         | 1            | depentir      | 1               |
-| retrover         | 1            | retrois       | 1               |
-| celer1           | 1            | cel           | 1               |
-| papegai          | 1            | papeliant     | 1               |
-| chatel           | 1            | chater        | 1               |
-| apartenir        | 1            | apertenir     | 1               |
-| avesprer         | 1            | avespre       | 1               |
-| refaire1         | 1            | refaire2      | 1               |
-| deguerpir        | 1            | degreier      | 1               |
-| comander         | 1            | coment1       | 1               |
-| ancïenement      | 1            | encïent       | 1               |
-| anciien          | 1            | escïent       | 1               |
-| mieus            | 1            | mel           | 1               |
-| cervel           | 1            | cors1         | 1               |
-| haut             | 1            | hater2        | 1               |
-| enfer            | 1            | enfant        | 1               |
-| empoindre        | 1            | empoignier    | 1               |
-| desjoinccïon     | 1            | discidance    | 1               |
-| uit              | 1            | set           | 1               |
-| nuef1            | 1            | il            | 1               |
-| plesence         | 1            | plaisence     | 1               |
-| respit           | 1            | repïet        | 1               |
-| nomement         | 1            | noment        | 1               |
-| sospendre        | 1            | sospire       | 1               |
-| toit             | 1            | tot           | 1               |
-| sain             | 1            | saignier      | 1               |
-| catre            | 1            | cot           | 1               |
-| limors           | 1            | limoges       | 1               |
-| losengier2       | 1            | losengier1    | 1               |
-| entrecontrariier | 1            | entrecombatre | 1               |
-| mie1             | 1            | mie           | 1               |
-| despire          | 1            | despite       | 1               |
-| dozime           | 1            | doner         | 1               |
-| nesun            | 1            | nesus         | 1               |
-| crïer2           | 1            | criembre      | 1               |
-| departir         | 1            | deporter      | 1               |
-| prendre          | 1            | pendre        | 1               |
-| esfrëer          | 1            | esfrïer       | 1               |
-| encenser2        | 1            | encener       | 1               |
-| recorir          | 1            | recorder      | 1               |
-| müel             | 1            | mu1           | 1               |
-| oir              | 1            | hoir          | 1               |
-| reperdre         | 1            | reprendre1    | 1               |
-| ohi              | 1            | öir           | 1               |
-| plaisance        | 1            | plaissance    | 1               |
-| oïr              | 1            | oir           | 1               |
-| proiier          | 1            | prometre      | 1               |
-| pleige           | 1            | ploige        | 1               |
-| deplaindre       | 1            | departir      | 1               |
-| remener          | 1            | remanoir      | 1               |
-| autrui           | 1            | nature        | 1               |
-| malapris         | 1            | malapré       | 1               |
-| escuser2         | 1            | escuser1      | 1               |
-| damage           | 1            | domacier      | 1               |
-| enchasser        | 1            | enchacier     | 1               |
-| esböeler         | 1            | esböener      | 1               |
-| peindre1         | 1            | point         | 1               |
-| sauver           | 1            | savoir        | 1               |
-| cembel1er        | 1            | chamberler    | 1               |
-| saler            | 1            | salir2        | 1               |
-| pointurie        | 1            | pointuret     | 1               |
-| mëismement       | 1            | mïemement     | 1               |
-| dis2             | 1            | dit           | 1               |
-| reproche         | 1            | reprochier1   | 1               |
-| prover           | 1            | proisier      | 1               |
-| present1         | 1            | present2      | 1               |
-| molin            | 1            | moillien1     | 1               |
-| moudre1          | 1            | movoir        | 1               |
-| for              | 1            | fort          | 1               |
-| vair2            | 1            | vair1         | 1               |
-| manoir1          | 1            | mener         | 1               |
-| puis             | 1            | plus          | 1               |
-| sentir           | 1            | estre1        | 1               |
-| cant1            | 1            | cant2         | 1               |
-| abatëiz          | 1            | abatre        | 1               |
-| sëur2            | 1            | sor2          | 1               |
-| pëor             | 1            | por2          | 1               |
-| rompre           | 1            | ros3          | 1               |
-| nape             | 1            | napert        | 1               |
-| sembler          | 1            | sebile        | 1               |
-| coral2           | 1            | corail        | 1               |
-| ajornal          | 1            | ajorner       | 1               |
-| sainteté         | 1            | saint         | 1               |
-| nul              | 1            | nos1          | 1               |
-| elainne          | 1            | eleine        | 1               |
-| espee            | 1            | sepe          | 1               |
-| mont             | 1            | monde1        | 1               |
-| chaloir          | 1            | chëoir        | 1               |
-| forsené          | 1            | forsener      | 1               |
-| delivre2         | 1            | delivre1      | 1               |
-| argone           | 1            | argonde       | 1               |
-| pois2            | 1            | pois1         | 1               |
-| tinianus         | 1            | tinitanc      | 1               |
-| trejanus         | 1            | trengale      | 1               |
-| sevoir           | 1            | savoir        | 1               |
-| coment1          | 1            | comencier     | 1               |
-| avoutire1        | 1            | avoitre       | 1               |
-| ensivre2         | 1            | ensivre1      | 1               |
-| secrestain       | 1            | secretain     | 1               |
-| desiretement     | 1            | desertinement | 1               |
-| es3              | 1            | en1+le        | 1               |
-| noroison         | 1            | norion        | 1               |
-| parrastre        | 1            | pareras       | 1               |
-| enclume          | 1            | enclumer      | 1               |
-| armaire          | 1            | onor          | 1               |
-| arborius         | 1            | priier        | 1               |
-| brunet           | 1            | brunir        | 1               |
-| entr'ueil        | 1            | entr'avol     | 1               |
-| merveillier      | 1            | merveillos    | 1               |
-| fort             | 1            | fors1         | 1               |
-| saisir           | 1            | secorre1      | 1               |
-| coi2             | 1            | qui           | 1               |
-| crever           | 1            | griver        | 1               |
-| voirement        | 1            | ivorment      | 1               |
-| definement       | 1            | definerie     | 1               |
-| oier             | 1            | oir           | 1               |
-| anee             | 1            | anene2        | 1               |
-| boiste           | 1            | bote2         | 1               |
-| atendre          | 1            | atant         | 1               |
-| lor2             | 1            | il            | 1               |
-| estanchier       | 1            | estenceler    | 1               |
-| enfançon         | 1            | enfance       | 1               |
-| baril            | 1            | barrable      | 1               |
-| paien            | 1            | paiier        | 1               |
-| glatir           | 1            | glatent       | 1               |
-| arinant          | 1            | ariene        | 1               |
-| evesque          | 1            | viece         | 1               |
-| dont             | 1            | donc          | 1               |
-| celebrer         | 1            | celer1        | 1               |
-| fragilité        | 1            | freiglait     | 1               |
-| taster           | 1            | taire         | 1               |
-| plain            | 1            | plein         | 1               |
-| maintenant       | 1            | maintenir     | 1               |
-| neporuec         | 1            | neporcaut     | 1               |
-| faunoiier        | 1            | faudernement  | 1               |
-| tolede           | 1            | tolete        | 1               |
-| candie           | 1            | chandie       | 1               |
-| esclat           | 1            | escla         | 1               |
-| froiier          | 1            | fraindre      | 1               |
-| recouper         | 1            | recoper       | 1               |
-| tronçoner        | 1            | trenchier1    | 1               |
-| es1              | 1            | ais           | 1               |
-| estrosseement    | 1            | estrossement  | 1               |
-| pers             | 1            | per           | 1               |
-| cort1            | 1            | cuer2         | 1               |
-| deugié           | 1            | doloir        | 1               |
-| paroir           | 1            | perdre        | 1               |
-| nüe              | 1            | nu1           | 1               |
-| lïement          | 1            | lieement      | 1               |
-| tartarun         | 1            | tartart       | 1               |
-| obëir            | 1            | obesïoigne    | 1               |
-| poing            | 1            | pui           | 1               |
-| nerve            | 1            | nevre         | 1               |
-| forclore         | 1            | fors1         | 1               |
-| soverain         | 1            | sovenaire     | 1               |
-| logier           | 1            | loignier      | 1               |
-| paumier2         | 1            | pamier        | 1               |
-| träitor          | 1            | traitier      | 1               |
-| degaster         | 1            | degahater     | 1               |
-| lié1             | 1            | lé            | 1               |
-| mestorner        | 1            | mestirer      | 1               |
-| retarder         | 1            | retenir       | 1               |
-| maillier2        | 1            | maillier1     | 1               |
-| babilonie        | 1            | babiloine     | 1               |
-| guerroiier2      | 1            | guerrier      | 1               |
-| quitëé           | 1            | quite         | 1               |
-| chamoiz          | 1            | camois        | 1               |
-| floripas         | 1            | florïant      | 1               |
-| rëont            | 1            | rëon          | 1               |
-| sauf             | 1            | son4          | 1               |
-| noé              | 1            | nol           | 1               |
-| arche2           | 1            | arche         | 1               |
-| oindre           | 1            | oidre         | 1               |
-| crïee            | 1            | crïer2        | 1               |
-| voiz             | 1            | voie          | 1               |
-| marc1            | 1            | marz          | 1               |
-| crïator          | 1            | crïature      | 1               |
-| main1            | 1            | main2         | 1               |
-| assignier        | 1            | assenir       | 1               |
-| reconoistre      | 1            | requerre      | 1               |
-| mescrëant        | 1            | mescroire     | 1               |
-| content2         | 1            | conter        | 1               |
-| reboter          | 1            | reboter1      | 1               |
-| entre2           | 1            | entre         | 1               |
-| engignier1       | 1            | enseignier    | 1               |
-| amant            | 1            | amer1         | 1               |
-| croire           | 1            | croistre      | 1               |
-| demostrer        | 1            | demorer       | 1               |
-| roidement        | 1            | redement      | 1               |
-| riule            | 1            | roigle        | 1               |
-| mençogne         | 1            | mongage       | 1               |
-| flore            | 1            | floovant      | 1               |
-| trenchier1       | 1            | trenchant     | 1               |
-| atorner          | 1            | ateler        | 1               |
-| consiree         | 1            | consivre      | 1               |
-| aparmain         | 1            | aparement     | 1               |
-| dido             | 1            | didi          | 1               |
-| gorge            | 1            | gage          | 1               |
-| felix            | 1            | felon         | 1               |
-| merveillos       | 1            | merveille     | 1               |
-| après            | 1            | aspre         | 1               |
-| oriande          | 1            | orïent        | 1               |
-| blanchoiier      | 1            | blanchir      | 1               |
-| sëure            | 1            | sore          | 1               |
-| höer             | 1            | hoire         | 1               |
-| poil             | 1            | pel1          | 1               |
-| clerjon          | 1            | clerc         | 1               |
-| yuliuz           | 1            | hilus         | 1               |
-| depercier        | 1            | depecier      | 1               |
-| face             | 1            | faire         | 1               |
-| planter          | 1            | plenté        | 1               |
-| remanoir         | 1            | remander      | 1               |
-| estrangement     | 1            | estrange      | 1               |
-| recoillir        | 1            | reculer       | 1               |
-| celer2           | 1            | celer1        | 1               |
-| apareillier1     | 1            | afebliier     | 1               |
-| errer2           | 1            | erre1         | 1               |
-| vengement        | 1            | venir         | 1               |
-| deduit           | 1            | deduire       | 1               |
-| jurer            | 1            | jesir         | 1               |
-| endementieres    | 1            | endemain      | 1               |
-| autant           | 1            | atant         | 1               |
-| grece            | 1            | griche        | 1               |
-| aiuel            | 1            | avoir         | 1               |
-| jarlein          | 1            | maugalien     | 1               |
-| larriz           | 1            | lorir         | 1               |
-| gloton           | 1            | florc         | 1               |
-| noveleté         | 1            | novité        | 1               |
-| paulus           | 1            | paulon        | 1               |
-| artilian         | 1            | artian        | 1               |
-| enforcier1       | 1            | endormir      | 1               |
-| huchier1         | 1            | hochier       | 1               |
-| demaine1         | 1            | demener       | 1               |
-| corroz           | 1            | culue2        | 1               |
-| reforsener       | 1            | reforser2     | 1               |
-| röeler           | 1            | roler         | 1               |
-| secorre1         | 1            | secor         | 1               |
-| estre4           | 1            | estre1        | 1               |
-| monëer           | 1            | mener         | 1               |
-| foiz             | 1            | foi           | 1               |
-| nigremance       | 1            | nigerece      | 1               |
-| jart1            | 1            | jart          | 1               |
-| nöer2            | 1            | no11          | 1               |
-| mener            | 1            | moine1        | 1               |
-| avancir          | 1            | avenant       | 1               |
-| cambrai          | 1            | charmir       | 1               |
-| lacier           | 1            | laschier      | 1               |
-| ligne2           | 1            | ligniee       | 1               |
-| avorter          | 1            | avoir         | 1               |
-| redementer       | 1            | redemander    | 1               |
-| pomier           | 1            | pamier        | 1               |
-| penëant          | 1            | penëir        | 1               |
-| sostenement      | 1            | sostement     | 1               |
-| toivre           | 1            | tibre         | 1               |
-| gerir            | 1            | garir         | 1               |
-| empeler          | 1            | emparlir      | 1               |
-| chëable          | 1            | crëable       | 1               |
-| afeblir          | 1            | esfloitier    | 1               |
-| colorir          | 1            | convoir       | 1               |
-| sol1             | 1            | soz           | 1               |
-| pesme            | 1            | pieme         | 1               |
-| jornee           | 1            | jorner        | 1               |
-| plein            | 1            | pleinement    | 1               |
-| douce-joie       | 1            | doucier       | 1               |
-| marguerite       | 1            | marchëarie    | 1               |
-| porter           | 1            | port2         | 1               |
-| eschivement      | 1            | eschiement    | 1               |
-| baillir          | 1            | baillier      | 1               |
-| escorser         | 1            | escorre1      | 1               |
-| covent1          | 1            | conoistre     | 1               |
-| eschëoir         | 1            | eschifier     | 1               |
-| oblïance         | 1            | oblice        | 1               |
-| margerie         | 1            | magier        | 1               |
-| serrer           | 1            | sarrer        | 1               |
-| silence          | 1            | siglence      | 1               |
-| marche1          | 1            | marche2       | 1               |
-| asseoir          | 1            | asne          | 1               |
-| boter1           | 1            | buitier       | 1               |
-| reprendre2       | 1            | reprendre1    | 1               |
-| malëure          | 1            | malëur        | 1               |
-| durement         | 1            | durement2     | 1               |
-| tarir            | 1            | taire         | 1               |
-| privee           | 1            | privé1        | 1               |
-| gerin            | 1            | garin         | 1               |
-| vis1             | 1            | uis           | 1               |
-| tiran            | 1            | tirer         | 1               |
-| doucement        | 1            | douz          | 1               |
-| messie           | 1            | maisniee      | 1               |
-| ci               | 1            | si            | 1               |
-| äi!              | 1            | hai!          | 1               |
-| desonorer        | 1            | desofrir      | 1               |
-| orer2            | 1            | öir           | 1               |
-| enubler          | 1            | anobler       | 1               |
-| sanses           | 1            | samsun        | 1               |
-| maistre          | 1            | metre2        | 1               |
-| aprendre         | 1            | apercenoir    | 1               |
-| passemervoille   | 1            | passemsele    | 1               |
-| tortüe           | 1            | tort1         | 1               |
-| serpent          | 1            | saprent       | 1               |
-| compagnie        | 1            | compagne1     | 1               |
-| cors2            | 1            | cors1         | 1               |
-| sofrir           | 1            | assourer      | 1               |
-| puiz             | 1            | poi           | 1               |
-| envoiier         | 1            | envoie        | 1               |
-| vent             | 1            | vendre        | 1               |
-| flair            | 1            | floisir       | 1               |
-| rose             | 1            | ros3          | 1               |
-| encraissier      | 1            | engresser     | 1               |
-| port2            | 1            | porter        | 1               |
-| serreement       | 1            | sarrasinement | 1               |
-| ceseire          | 1            | cesar         | 1               |
-| esche            | 1            | aiguece       | 1               |
-| entaillëure      | 1            | antiel        | 1               |
-| ponpinius        | 1            | ponpinien     | 1               |
-| ponponius        | 1            | ponpoing      | 1               |
-| sëeler           | 1            | salir2        | 1               |
-| durandart        | 1            | durendal      | 1               |
-| meillor          | 1            | mesler        | 1               |
-| membré1          | 1            | membré2       | 1               |
-| sacrefise        | 1            | sacrefiier    | 1               |
-| mescroire        | 1            | mescrëant     | 1               |
-| morir            | 1            | mort          | 1               |
-| relenquir        | 1            | relever       | 1               |
-| remetre          | 1            | remanoir      | 1               |
-| ordure           | 1            | ordre         | 1               |
-| aceindre         | 1            | acener        | 1               |
-| forclose         | 1            | forsel        | 1               |
-| teindre          | 1            | toindre       | 1               |
-| broche           | 1            | broche1       | 1               |
-| ardre            | 1            | hardir        | 1               |
-| université       | 1            | unevrité      | 1               |
-| pardonable       | 1            | pardunal      | 1               |
-| desarmer         | 1            | deserment     | 1               |
-| ospinel          | 1            | opinïon       | 1               |
-| laver            | 1            | lever         | 1               |
-| soillier         | 1            | soille        | 1               |
-| samsoinie        | 1            | samsonie      | 1               |
-| muntbrant        | 1            | muntram       | 1               |
-| joiant           | 1            | vëoir         | 1               |
-| maucuidant       | 1            | maudire       | 1               |
-| loigne1          | 1            | lonc          | 1               |
-| anmarri          | 1            | enraisri      | 1               |
-| tente4           | 1            | tant          | 1               |
-| miche            | 1            | miche1        | 1               |
-| ostesse          | 1            | oster2        | 1               |
-| aprentiz         | 1            | aprendre      | 1               |
-| corëor           | 1            | coroier       | 1               |
-| baston           | 1            | batre         | 1               |
-| angoissier       | 1            | angoisse      | 1               |
-| sëu              | 1            | savoir        | 1               |
-| cosin            | 1            | cuisine       | 1               |
-| ateindre         | 1            | ataindre      | 1               |
-| embel1ir         | 1            | embelie       | 1               |
-| seror            | 1            | süer          | 1               |
-| especïaument     | 1            | espusicement  | 1               |
-| manant           | 1            | mener         | 1               |
-| alegier1         | 1            | alige         | 1               |
-| assoagier        | 1            | assauge       | 1               |
-| espuisier        | 1            | espoisier     | 1               |
-| mesfait          | 1            | mesfaire      | 1               |
-| delaiance        | 1            | delaie        | 1               |
-| pute+gent1       | 1            | poindre       | 1               |
-| demoree          | 1            | demorer       | 1               |
-| süer             | 1            | suen          | 1               |
-| som3             | 1            | som2          | 1               |
-| estorbeillon     | 1            | estoble1      | 1               |
-| part1            | 1            | partir        | 1               |
-| voloir           | 1            | viel          | 1               |
-| amenistracion    | 1            | amistion      | 1               |
-| mu1              | 1            | mul3          | 1               |
-| letré1           | 1            | letré         | 1               |
-| mangier          | 1            | maigre        | 1               |
-| orteil           | 1            | artu          | 1               |
-| loier            | 1            | loiier        | 1               |
-| apolin           | 1            | apolir        | 1               |
-| piramus          | 1            | pirampor      | 1               |
-| melancolie       | 1            | melealon      | 1               |
-| apointier2       | 1            | apoindre      | 1               |
-| ossenefort       | 1            | oblase        | 1               |
-| chastel          | 1            | chautel       | 1               |
-| que2+il          | 1            | que4          | 1               |
-| escachier        | 1            | eschaucier    | 1               |
-| desassembler     | 1            | dessaucier    | 1               |
-| fonz             | 1            | font1         | 1               |
-| lambegues        | 1            | lamberlenc    | 1               |
-| uevre            | 1            | ovrir         | 1               |
-| fin1             | 1            | fin2          | 1               |
-| mail             | 1            | mal1          | 1               |
-| piler2           | 1            | pilet2        | 1               |
-| ravoiier         | 1            | ravoir2       | 1               |
-| garder           | 1            | garde         | 1               |
-| vinçant          | 1            | saint-vincent | 1               |
-| guerredon        | 1            | gironde       | 1               |
-| gremoarz         | 1            | gremarain     | 1               |
-| muntdisoier      | 1            | montidier     | 1               |
-| edesse           | 1            | deseut        | 1               |
-| laudesse         | 1            | laudunet      | 1               |
-| forsen           | 1            | forsener      | 1               |
-| paliz            | 1            | palir         | 1               |
-| devise           | 1            | deviser       | 1               |
-| raconter         | 1            | reconter      | 1               |
-| chandoile        | 1            | chaudel       | 1               |
-| soner            | 1            | sovenir       | 1               |
-| brabançon        | 1            | brebican      | 1               |
-| jesu             | 1            | jhesu         | 1               |
-| precier          | 1            | prëechier     | 1               |
-| ole              | 1            | il            | 1               |
-| mëismes          | 1            | mëisme        | 1               |
-| mors1            | 1            | mur           | 1               |
-| mal              | 1            | mal1          | 1               |
-| priscillien      | 1            | prisicle      | 1               |
-| noinz            | 1            | nom           | 1               |
-| soute            | 1            | soter2        | 1               |
-| prison           | 1            | dragon        | 1               |
-| fors1            | 1            | fort          | 1               |
-| despendëor2      | 1            | despendëor    | 1               |
-| porreture        | 1            | porte1        | 1               |
-| porpoindre       | 1            | porpensé1     | 1               |
-| enföir1          | 1            | enföir2       | 1               |
-| noçoiier         | 1            | nocier        | 1               |
-| paumoiier        | 1            | paumie2       | 1               |
-| regarder         | 1            | ergaragnier   | 1               |
-| oripont          | 1            | orïent        | 1               |
-| fossé            | 1            | fosse         | 1               |
-| carriere         | 1            | craisdre      | 1               |
-| renge2           | 1            | resne2        | 1               |
-| desserrer        | 1            | descirier     | 1               |
-| crïacïon         | 1            | crïator       | 1               |
-| el1              | 1            | en1+le        | 1               |
-| fontaine         | 1            | fontene       | 1               |
-| fé               | 1            | faire         | 1               |
-| comé             | 1            | comer1        | 1               |
-| aloigne          | 1            | aleigne       | 1               |
-| eschevir3        | 1            | excevin       | 1               |
-| sorargenter      | 1            | sorage        | 1               |
-| radoter          | 1            | radoter1      | 1               |
-| de+il            | 1            | de+le         | 1               |
-| ressuier         | 1            | resuscire     | 1               |
-| costure          | 1            | coutree       | 1               |
-| damagier         | 1            | damagne       | 1               |
-| amer1            | 1            | amasser       | 1               |
-| araisne          | 1            | areine        | 1               |
-| oreillier3       | 1            | oreillier1    | 1               |
-| quarrois         | 1            | carrois       | 1               |
-| carduel          | 1            | karadusal     | 1               |
-| devisëor         | 1            | devisïon      | 1               |
-| däerrain         | 1            | derrenier     | 1               |
-| engrant          | 1            | emgrant       | 1               |
-| antiaume         | 1            | entencïos     | 1               |
-| tesmoignement    | 1            | tesmoignier   | 1               |
-| ancïeneté        | 1            | anciien       | 1               |
-| eslaissier       | 1            | eslacier      | 1               |
-| templier2        | 1            | templir       | 1               |
-| jus1             | 1            | ius           | 1               |
-| que2/            | 1            | que2          | 1               |
-| livre3           | 1            | livre1        | 1               |
+| Expected         | Total Errors | Predictions       | Predicted times |
+|------------------|--------------|-------------------|-----------------|
+| que4             | 85           | que2              | 79              |
+|                  |              | que1              | 4               |
+|                  |              | qui               | 1               |
+|                  |              | quel1             | 1               |
+| que2             | 80           | que4              | 67              |
+|                  |              | que3              | 6               |
+|                  |              | qui               | 3               |
+|                  |              | que1              | 2               |
+|                  |              | cui               | 2               |
+| que1             | 35           | que4              | 28              |
+|                  |              | que2              | 5               |
+|                  |              | cent              | 2               |
+| avoir            | 29           | a3                | 22              |
+|                  |              | öir               | 2               |
+|                  |              | aidier            | 2               |
+|                  |              | araire            | 1               |
+|                  |              | un                | 1               |
+|                  |              | et                | 1               |
+| le               | 29           | il                | 28              |
+|                  |              | se+le             | 1               |
+| ne2              | 24           | ne1               | 24              |
+| il               | 24           | le                | 21              |
+|                  |              | là                | 2               |
+|                  |              | el1               | 1               |
+| ne1              | 16           | ne2               | 15              |
+|                  |              | il                | 1               |
+| que3             | 15           | que4              | 9               |
+|                  |              | que2              | 6               |
+| se               | 14           | soi1              | 7               |
+|                  |              | si                | 5               |
+|                  |              | ce1               | 2               |
+| öir              | 12           | avoir             | 9               |
+|                  |              | oir               | 3               |
+| a3               | 12           | avoir             | 12              |
+| si               | 11           | soi1              | 6               |
+|                  |              | se                | 4               |
+|                  |              | son4              | 1               |
+| en1+le           | 9            | o3                | 6               |
+|                  |              | il                | 2               |
+|                  |              | estre1            | 1               |
+| estre1           | 9            | ester             | 3               |
+|                  |              | savoir            | 2               |
+|                  |              | soi2              | 1               |
+|                  |              | ez                | 1               |
+|                  |              | avoir             | 1               |
+|                  |              | etre              | 1               |
+| cel              | 8            | cil               | 4               |
+|                  |              | celer1            | 2               |
+|                  |              | quel1             | 1               |
+|                  |              | ce2               | 1               |
+| on               | 8            | en1               | 4               |
+|                  |              | en2               | 3               |
+|                  |              | un                | 1               |
+| en1              | 8            | en2               | 6               |
+|                  |              | on                | 2               |
+| en2              | 7            | en1               | 6               |
+|                  |              | on                | 1               |
+| ‘                | 7            | ''''              | 6               |
+|                  |              |                   | 1               |
+| ce2              | 7            | ce1               | 6               |
+|                  |              | son4              | 1               |
+| soi1             | 7            | se                | 5               |
+|                  |              | si                | 2               |
+| savoir           | 7            | estre1            | 4               |
+|                  |              | sivre             | 2               |
+|                  |              | sachier2          | 1               |
+| ''''             | 6            | ‘                 | 6               |
+| entre            | 6            | entre2            | 5               |
+|                  |              | entrer            | 1               |
+| donc             | 6            | dont              | 4               |
+|                  |              | don               | 2               |
+| conte1           | 6            | conter            | 3               |
+|                  |              | conte2            | 3               |
+| où               | 6            | o3                | 5               |
+|                  |              | en1+le            | 1               |
+| saint            | 6            | saint1            | 5               |
+|                  |              | saintisme         | 1               |
+| livre2           | 6            | livre3            | 6               |
+| par              | 6            | por2              | 6               |
+| cui              | 6            | qui               | 5               |
+|                  |              | que2              | 1               |
+| là               | 6            | il                | 4               |
+|                  |              | le                | 2               |
+| bien2            | 6            | bien1             | 6               |
+| ainz             | 6            | ainc              | 5               |
+|                  |              | enz               | 1               |
+| corir            | 5            | cort1             | 1               |
+|                  |              | cort2             | 1               |
+|                  |              | acorre            | 1               |
+|                  |              | querre            | 1               |
+|                  |              | cure              | 1               |
+| nos1             | 5            | nostre            | 4               |
+|                  |              | nul               | 1               |
+| vivre1           | 5            | vëoir             | 4               |
+|                  |              | vif               | 1               |
+| jesu             | 5            | jhesu             | 5               |
+| tant             | 5            | atant             | 3               |
+|                  |              | tens              | 1               |
+|                  |              | tendre1           | 1               |
+| nom              | 4            | non               | 4               |
+| ainc             | 4            | ainz              | 4               |
+| suen             | 4            | savoir            | 2               |
+|                  |              | si                | 1               |
+|                  |              | sëoir             | 1               |
+| cant2            | 4            | cant1             | 2               |
+|                  |              | cantque           | 2               |
+| mort             | 4            | morir             | 4               |
+| o3               | 4            | où                | 3               |
+|                  |              | en1+le            | 1               |
+| son4             | 4            | soz               | 1               |
+|                  |              | si+il             | 1               |
+|                  |              | si                | 1               |
+|                  |              | soi1              | 1               |
+| entre2           | 4            | entre             | 4               |
+| dan2             | 4            | damnedeu          | 4               |
+| ester            | 4            | estre1            | 3               |
+|                  |              | estovoir1         | 1               |
+| vostre           | 4            | vos               | 4               |
+| cest             | 4            | ce2               | 4               |
+| maint            | 3            | moins             | 1               |
+|                  |              | mente_comunaument | 1               |
+|                  |              | ment              | 1               |
+| ticius           | 3            | tyces             | 3               |
+| däerrain         | 3            | desraison         | 1               |
+|                  |              | desrine           | 1               |
+|                  |              | derrenier         | 1               |
+| dont             | 3            | donc              | 3               |
+| vos              | 3            | vostre            | 3               |
+| oir              | 3            | öir               | 3               |
+| tendre1          | 3            | tendre2           | 3               |
+| ome              | 3            | heaume            | 1               |
+|                  |              | on                | 1               |
+|                  |              | enemi             | 1               |
+| laissier         | 3            | laiier2           | 1               |
+|                  |              | là                | 1               |
+|                  |              | lait2             | 1               |
+| trieves          | 3            | trieue            | 3               |
+| qui              | 3            | cui               | 1               |
+|                  |              | qui+il            | 1               |
+|                  |              | que4              | 1               |
+| prendre          | 3            | priier            | 1               |
+|                  |              | prest1            | 1               |
+|                  |              | pendre            | 1               |
+| fuir             | 3            | estre1            | 3               |
+| plein            | 3            | plenier2          | 1               |
+|                  |              | plain             | 1               |
+|                  |              | plaigne           | 1               |
+| plain            | 3            | plein             | 3               |
+| hericier         | 3            | errecier          | 2               |
+|                  |              | hercier           | 1               |
+| ore3             | 3            | ëur               | 2               |
+|                  |              | or4               | 1               |
+| repaire          | 3            | repairier         | 3               |
+| mais1            | 3            | mon1              | 2               |
+|                  |              | mes4              | 1               |
+| paroir           | 3            | perdre            | 2               |
+|                  |              | parent            | 1               |
+| oïr              | 3            | oir               | 3               |
+| issir            | 3            | user              | 2               |
+|                  |              | estre1            | 1               |
+| faire            | 3            | ferir             | 1               |
+|                  |              | fait1             | 1               |
+|                  |              | fachier           | 1               |
+| avoiier          | 3            | avoir             | 2               |
+|                  |              | avenant           | 1               |
+| si+il            | 3            | son4              | 2               |
+|                  |              | sauf              | 1               |
+| bien1            | 3            | bien2             | 3               |
+| sen2             | 3            | sanc              | 3               |
+| non              | 3            | nom               | 3               |
+| ainsi            | 3            | ainz              | 1               |
+|                  |              | ainsier           | 1               |
+|                  |              | ainçois           | 1               |
+| pro              | 3            | prodome           | 3               |
+| pris1            | 3            | prendre           | 2               |
+|                  |              | prisier           | 1               |
+| gent2            | 3            | gent1             | 3               |
+| mon1             | 3            | mais1             | 2               |
+|                  |              | je                | 1               |
+| vëoir            | 3            | aler              | 1               |
+|                  |              | vendre            | 1               |
+|                  |              | voloir            | 1               |
+| liier3           | 2            | lié1              | 2               |
+| mesfaire         | 2            | mesfait           | 2               |
+| maine            | 2            | main2             | 2               |
+| sire2            | 2            | seignor           | 2               |
+| pur              | 2            | por2              | 2               |
+| mossu            | 2            | mosdre1           | 1               |
+|                  |              | mosder2           | 1               |
+| conte2           | 2            | conte1            | 2               |
+| sor1             | 2            | sort2             | 1               |
+|                  |              | sore              | 1               |
+| changier         | 2            | chargier          | 1               |
+|                  |              | changois          | 1               |
+| flambe           | 2            | flame             | 2               |
+| entrer           | 2            | entree            | 1               |
+|                  |              | entre             | 1               |
+| laiier2          | 2            | laissier          | 2               |
+| löer2            | 2            | löer1             | 2               |
+| emperëor         | 2            | emperir           | 1               |
+|                  |              | empererriz        | 1               |
+| douz             | 2            | dote              | 1               |
+|                  |              | doze              | 1               |
+| sëoir            | 2            | soiier            | 1               |
+|                  |              | si+il             | 1               |
+| valoir           | 2            | vëoir             | 1               |
+|                  |              | vaillant          | 1               |
+| legier2          | 2            | legierement       | 2               |
+| esprisier        | 2            | esprendre2        | 1               |
+|                  |              | espresser         | 1               |
+| escharpe         | 2            | eschaper          | 2               |
+| guimer           | 2            | guirmart          | 1               |
+|                  |              | gui               | 1               |
+| deus             | 2            | dieu              | 1               |
+|                  |              | devoir            | 1               |
+| metre2           | 2            | mais1             | 1               |
+|                  |              | mon1              | 1               |
+| forclore         | 2            | forsencler        | 1               |
+|                  |              | forcler2          | 1               |
+| morir            | 2            | mort              | 2               |
+| estovoir1        | 2            | ester             | 1               |
+|                  |              | estout            | 1               |
+| devëer           | 2            | desver            | 1               |
+|                  |              | desvoiier1        | 1               |
+| sain             | 2            | saint             | 2               |
+| present1         | 2            | present2          | 2               |
+| charretier       | 2            | charriere         | 2               |
+| fil1             | 2            | fil2              | 2               |
+| desesperer       | 2            | dessevrer         | 2               |
+| encontre1        | 2            | encontre2         | 1               |
+|                  |              | encontrer         | 1               |
+| encensier        | 2            | ancensier         | 1               |
+|                  |              | encenser2         | 1               |
+| tot              | 2            | tost1             | 2               |
+| despire          | 2            | desrompre         | 1               |
+|                  |              | despit            | 1               |
+| foie2            | 2            | foiiee            | 2               |
+| lieue            | 2            | lieu              | 1               |
+|                  |              | lit1              | 1               |
+| sauver           | 2            | salir2            | 2               |
+| lieu             | 2            | il                | 1               |
+|                  |              | le                | 1               |
+| amer1            | 2            | belamer           | 1               |
+|                  |              | ainc              | 1               |
+| ez               | 2            | ester             | 1               |
+|                  |              | estre1            | 1               |
+| sor2             | 2            | sore              | 1               |
+|                  |              | sol1              | 1               |
+| prevoste         | 2            | prevost           | 2               |
+| raconter         | 2            | reconter          | 2               |
+| tor5             | 2            | tornoi            | 1               |
+|                  |              | tor2              | 1               |
+| rejeter          | 2            | regner            | 1               |
+|                  |              | rejehir           | 1               |
+| häir             | 2            | aler              | 1               |
+|                  |              | errer2            | 1               |
+| aler             | 2            | ageler            | 1               |
+|                  |              | alöer2            | 1               |
+| clore            | 2            | clos              | 2               |
+| fil2             | 2            | fiel              | 2               |
+| seignier         | 2            | saignier          | 2               |
+| errant           | 2            | errer2            | 2               |
+| desus            | 2            | desoz             | 2               |
+| fief             | 2            | fier              | 1               |
+|                  |              | fil2              | 1               |
+| forment          | 2            | forment2          | 2               |
+| col              | 2            | come1             | 1               |
+|                  |              | coup1             | 1               |
+| quiter           | 2            | cuidier1          | 1               |
+|                  |              | quite             | 1               |
+| chëoir           | 2            | chaufer           | 1               |
+|                  |              | chaitier          | 1               |
+| complie          | 2            | complir           | 2               |
+| avenant          | 2            | avenir            | 2               |
+| nuef1            | 2            | deus              | 1               |
+|                  |              | il                | 1               |
+| durer            | 2            | devoir            | 2               |
+| anjou            | 2            | anjon             | 1               |
+|                  |              | angonc            | 1               |
+| çoper            | 2            | coper             | 1               |
+|                  |              | cöaper            | 1               |
+| a3+le            | 2            | où                | 1               |
+|                  |              | il                | 1               |
+| aidier           | 2            | äie               | 1               |
+|                  |              | avoir             | 1               |
+| plovoir          | 2            | plaire            | 1               |
+|                  |              | plus              | 1               |
+| jaques           | 2            | saint-jaques      | 1               |
+|                  |              | saint-jacques     | 1               |
+| avenir           | 2            | avenant           | 2               |
+| soir             | 2            | serf              | 1               |
+|                  |              | seignor           | 1               |
+| gant             | 2            | gent1             | 2               |
+| enföir1          | 2            | arle              | 1               |
+|                  |              | enföir2           | 1               |
+| priier           | 2            | prendre           | 1               |
+|                  |              | priant            | 1               |
+| monseignor       | 2            | seignor           | 2               |
+| some3            | 2            | some2             | 2               |
+| verai            | 2            | veraiement        | 2               |
+| devoir           | 2            | doter2            | 1               |
+|                  |              | doi               | 1               |
+| logier           | 2            | loge              | 1               |
+|                  |              | loere             | 1               |
+| veinquëor        | 2            | veinqure          | 1               |
+|                  |              | veinque           | 1               |
+| oser             | 2            | oster2            | 1               |
+|                  |              | os2               | 1               |
+| un               | 2            | i2                | 2               |
+| autel2           | 2            | autel1            | 2               |
+| ersoir           | 2            | arison            | 2               |
+| voloir           | 2            | vos               | 2               |
+| refaire2         | 2            | refaire1          | 1               |
+|                  |              | referaistre       | 1               |
+| lé               | 2            | lez               | 1               |
+|                  |              | lait1             | 1               |
+| cuidier1         | 2            | quiti(s           | 1               |
+|                  |              | querre            | 1               |
+| decisïon         | 2            | desciti-ïon       | 1               |
+|                  |              | decissïon         | 1               |
+| tel              | 1            | atelie            | 1               |
+| morsel           | 1            | mors1             | 1               |
+| apercevoir       | 1            | esperchier        | 1               |
+| invasïon         | 1            | jevancier2        | 1               |
+| tierce           | 1            | tierz             | 1               |
+| geste1           | 1            | geste2            | 1               |
+| cote1            | 1            | cote2             | 1               |
+| emparler         | 1            | emparlé           | 1               |
+| tost1            | 1            | tot               | 1               |
+| jöir             | 1            | jöer              | 1               |
+| celebrer         | 1            | celer1            | 1               |
+| tandis           | 1            | tendre1           | 1               |
+| a3+il            | 1            | a3+le             | 1               |
+| resmaiier        | 1            | remanoir          | 1               |
+| vëer             | 1            | vëoir             | 1               |
+| colëiz           | 1            | colede            | 1               |
+| gramairiien      | 1            | gramain           | 1               |
+| retoriien        | 1            | retorin           | 1               |
+| müer             | 1            | mu1               | 1               |
+| agnies           | 1            | agnigier          | 1               |
+| cecile           | 1            | chaille           | 1               |
+| madelaine        | 1            | madelagne         | 1               |
+| raisnier         | 1            | resenerir         | 1               |
+| puiz             | 1            | puis              | 1               |
+| gatanie          | 1            | gante             | 1               |
+| chevelet         | 1            | chevel            | 1               |
+| grece            | 1            | griec             | 1               |
+| prometre         | 1            | premerain         | 1               |
+| ademander        | 1            | adementer         | 1               |
+| desvoiier1       | 1            | devoir            | 1               |
+| amende1          | 1            | amender           | 1               |
+| auvergne         | 1            | avigne            | 1               |
+| noé              | 1            | noeus             | 1               |
+| arche2           | 1            | arche             | 1               |
+| röer2            | 1            | röer1             | 1               |
+| voiage           | 1            | venjance          | 1               |
+| tor4             | 1            | tor2              | 1               |
+| entrespargnier   | 1            | entrespagrer      | 1               |
+| jangle           | 1            | gengele           | 1               |
+| craisse          | 1            | graisse           | 1               |
+| celer1           | 1            | cel               | 1               |
+| plait            | 1            | plaire            | 1               |
+| atendre          | 1            | ataindre          | 1               |
+| maleoit          | 1            | malëir            | 1               |
+| aluec            | 1            | alus              | 1               |
+| mëur             | 1            | mor1              | 1               |
+| puille           | 1            | puile             | 1               |
+| sicile           | 1            | seillise          | 1               |
+| apareillier1     | 1            | aparoir           | 1               |
+| taire            | 1            | ton4              | 1               |
+| si+en2           | 1            | si                | 1               |
+| ramponos         | 1            | ramponer          | 1               |
+| questain         | 1            | coistain          | 1               |
+| danois           | 1            | denois            | 1               |
+| pervers          | 1            | perver            | 1               |
+| ravoir2          | 1            | raler             | 1               |
+| encombrier       | 1            | encombrer         | 1               |
+| engignier1       | 1            | engendrer1        | 1               |
+| guichet          | 1            | guinchet          | 1               |
+| coster1          | 1            | cosdre            | 1               |
+| perche2          | 1            | perche1           | 1               |
+| don              | 1            | donc              | 1               |
+| par2             | 1            | por2              | 1               |
+| constance        | 1            | costantinos       | 1               |
+| envoiier         | 1            | enjoindre         | 1               |
+| reson            | 1            | raison            | 1               |
+| mëismes          | 1            | mëisme            | 1               |
+| montant          | 1            | montaigne         | 1               |
+| liier1           | 1            | liier3            | 1               |
+| cinquisme        | 1            | cinquise          | 1               |
+| bienëuré         | 1            | benëir            | 1               |
+| cele             | 1            | ciel              | 1               |
+| duchoise1        | 1            | docoistre         | 1               |
+| priiere          | 1            | präerie           | 1               |
+| escordement1     | 1            | escordement       | 1               |
+| renomer          | 1            | renomee           | 1               |
+| waraingle        | 1            | valoir            | 1               |
+| deça             | 1            | dece              | 1               |
+| dela             | 1            | delaiier1         | 1               |
+| justien          | 1            | justinien         | 1               |
+| enteimes         | 1            | entente           | 1               |
+| carante          | 1            | il                | 1               |
+| vanter           | 1            | vendre            | 1               |
+| desenseignier    | 1            | dessener          | 1               |
+| escüele          | 1            | escuel            | 1               |
+| a2               | 1            | ha                | 1               |
+| inocent          | 1            | inneci            | 1               |
+| remener          | 1            | remanoir          | 1               |
+| esveil           | 1            | esveille          | 1               |
+| entressaiier     | 1            | entresaitier      | 1               |
+| sarge            | 1            | sargres           | 1               |
+| erumprez         | 1            | ordremore         | 1               |
+| mulot2           | 1            | mulet3            | 1               |
+| ambler           | 1            | embler            | 1               |
+| oncle            | 1            | oncler            | 1               |
+| esforz1          | 1            | efroire           | 1               |
+| o4               | 1            | o3                | 1               |
+| intencïon        | 1            | entencïon         | 1               |
+| refuse           | 1            | refuser           | 1               |
+| boise2           | 1            | bois              | 1               |
+| rementevoir      | 1            | ramentevoir       | 1               |
+| brusler          | 1            | bruillier         | 1               |
+| espaignol        | 1            | espagne           | 1               |
+| manee            | 1            | mener             | 1               |
+| cordes           | 1            | corde             | 1               |
+| gemé             | 1            | gamer             | 1               |
+| tenir1           | 1            | tendre1           | 1               |
+| targier2         | 1            | targe1            | 1               |
+| ceinture         | 1            | chaitine          | 1               |
+| prinseignier     | 1            | prendre           | 1               |
+| doner            | 1            | durer             | 1               |
+| vivre2           | 1            | vivre1            | 1               |
+| vestement        | 1            | vestiment         | 1               |
+| estable          | 1            | estable1          | 1               |
+| desirrer         | 1            | descirier         | 1               |
+| forcele          | 1            | forcele1          | 1               |
+| coree            | 1            | corir             | 1               |
+| present2         | 1            | present1          | 1               |
+| vaillant         | 1            | valoir            | 1               |
+| tüel             | 1            | toille            | 1               |
+| esblöir          | 1            | embler            | 1               |
+| ensemble         | 1            | ensemel           | 1               |
+| dent2            | 1            | dan2              | 1               |
+| moiuel1          | 1            | möel              | 1               |
+| peinture         | 1            | pointure          | 1               |
+| porpre1          | 1            | propre            | 1               |
+| cincante         | 1            | le                | 1               |
+| arapater         | 1            | araparer          | 1               |
+| vantance         | 1            | maisoncele        | 1               |
+| claudas          | 1            | claudie           | 1               |
+| voirre           | 1            | voir              | 1               |
+| aveuc            | 1            | avuec             | 1               |
+| trenchier1       | 1            | tranter           | 1               |
+| paumeton         | 1            | paument           | 1               |
+| obëir            | 1            | oblie             | 1               |
+| tabriol          | 1            | carduel           | 1               |
+| membre           | 1            | membrer2          | 1               |
+| trinité          | 1            | trinite           | 1               |
+| porsivre         | 1            | porsëoir2         | 1               |
+| reguignier       | 1            | rejuginer         | 1               |
+| chevelu          | 1            | chevel            | 1               |
+| chauf            | 1            | chaufe            | 1               |
+| brachant         | 1            | brachier          | 1               |
+| coute            | 1            | coste2            | 1               |
+| roster1          | 1            | resover           | 1               |
+| sainteté         | 1            | sainter           | 1               |
+| texte            | 1            | titre             | 1               |
+| rencomencier     | 1            | rencomancier      | 1               |
+| basme            | 1            | baume             | 1               |
+| e2               | 1            | et                | 1               |
+| comant           | 1            | comandement       | 1               |
+| ivel             | 1            | oleme             | 1               |
+| tai              | 1            | taire             | 1               |
+| lointain         | 1            | loingïe           | 1               |
+| guerrer          | 1            | guerroiier2       | 1               |
+| turcople         | 1            | turchier          | 1               |
+| chargier         | 1            | carchié           | 1               |
+| après            | 1            | emprès            | 1               |
+| delivre2         | 1            | delivre1          | 1               |
+| voir             | 1            | vair1             | 1               |
+| termes           | 1            | terme             | 1               |
+| ier              | 1            | erz               | 1               |
+| mors1            | 1            | mort              | 1               |
+| come1            | 1            | que4              | 1               |
+| alerïon          | 1            | alerin            | 1               |
+| saint-omer       | 1            | saintemoin        | 1               |
+| bolir            | 1            | boter1            | 1               |
+| ferir            | 1            | fier              | 1               |
+| acolite          | 1            | acoillir          | 1               |
+| charles          | 1            | charlemagne       | 1               |
+| testiere         | 1            | teste             | 1               |
+| ote              | 1            | otinel            | 1               |
+| arrement         | 1            | arment            | 1               |
+| pereços          | 1            | perece            | 1               |
+| covenant         | 1            | covenir           | 1               |
+| amenistreor      | 1            | amenistrer        | 1               |
+| francagel        | 1            | françois          | 1               |
+| sauvagine        | 1            | sauvage           | 1               |
+| renoncier        | 1            | renomer           | 1               |
+| repöoir          | 1            | reposer           | 1               |
+| lïon             | 1            | lon               | 1               |
+| serpent          | 1            | serpir            | 1               |
+| pierre           | 1            | pere              | 1               |
+| acorionde        | 1            | acorder           | 1               |
+| esche            | 1            | asche2            | 1               |
+| fole             | 1            | fol3              | 1               |
+| frere            | 1            | fraire            | 1               |
+| fëon             | 1            | fais              | 1               |
+| alfamie          | 1            | alfanie           | 1               |
+| comandëor        | 1            | comander          | 1               |
+| herbergement     | 1            | herbergerement    | 1               |
+| felon            | 1            | felonie           | 1               |
+| livrer           | 1            | livre2            | 1               |
+| doter1           | 1            | doter2            | 1               |
+| valüe            | 1            | valee             | 1               |
+| mentir           | 1            | mente             | 1               |
+| naïmant          | 1            | naimes            | 1               |
+| espiet           | 1            | espiier1          | 1               |
+| tarir            | 1            | targier2          | 1               |
+| traire           | 1            | trover            | 1               |
+| despendre1       | 1            | despendre2        | 1               |
+| eschëoite        | 1            | eschaiement       | 1               |
+| ueil             | 1            | ol1               | 1               |
+| coche1           | 1            | couchier          | 1               |
+| vis2             | 1            | vif               | 1               |
+| corjon           | 1            | corin             | 1               |
+| catre            | 1            | trois             | 1               |
+| entr'acompagnier | 1            | entracompagnier   | 1               |
+| tref2            | 1            | tref1             | 1               |
+| luitier          | 1            | luite             | 1               |
+| losengier2       | 1            | losenge2          | 1               |
+| renluminer       | 1            | renumer           | 1               |
+| aparmain         | 1            | aparoin           | 1               |
+| cant1            | 1            | cant2             | 1               |
+| doiz             | 1            | doi               | 1               |
+| dïaspre          | 1            | desdëart          | 1               |
+| livre1           | 1            | livre3            | 1               |
+| lombardie        | 1            | lumbardie         | 1               |
+| orlëure          | 1            | olorir            | 1               |
+| perece           | 1            | parestie          | 1               |
+| seur             | 1            | sor2              | 1               |
+| lez              | 1            | lé                | 1               |
+| hai!             | 1            | e2                | 1               |
+| bot1             | 1            | bot4              | 1               |
+| uisseüre         | 1            | fuerëor           | 1               |
+| deporter         | 1            | emporter2         | 1               |
+| gondri           | 1            | gondip            | 1               |
+| soshaucier       | 1            | sostenir          | 1               |
+| sidoine          | 1            | sidon             | 1               |
+| noradin          | 1            | loradrain         | 1               |
+| ane              | 1            | asne              | 1               |
+| pestilence       | 1            | pesticele         | 1               |
+| astrenomie       | 1            | astrencement      | 1               |
+| carthage         | 1            | cartage           | 1               |
+| rëondement       | 1            | romprement        | 1               |
+| laiton           | 1            | latin             | 1               |
+| estraim          | 1            | estrain           | 1               |
+| denis            | 1            | saint-denis       | 1               |
+| tozjors          | 1            | torjor            | 1               |
+| tresfiner        | 1            | trenfigier        | 1               |
+| set              | 1            | savoir            | 1               |
+| vis1             | 1            | vif               | 1               |
+| fier             | 1            | fer               | 1               |
+| chastel          | 1            | chatel            | 1               |
+| croistre         | 1            | croire            | 1               |
+| esloissier       | 1            | esloisir          | 1               |
+| joseph           | 1            | josepez           | 1               |
+| justicier2       | 1            | justice           | 1               |
+| ici              | 1            | issir             | 1               |
+| acomparagier     | 1            | acompagnier       | 1               |
+| saint1           | 1            | saint             | 1               |
+| maudit           | 1            | maudire           | 1               |
+| forsenage        | 1            | forsenerie        | 1               |
+| no1              | 1            | nos               | 1               |
+| aprentiz         | 1            | aprendre          | 1               |
+| bigot            | 1            | bigue             | 1               |
+| atant            | 1            | il                | 1               |
+| devaler          | 1            | desvaler          | 1               |
+| marbri           | 1            | marbrir           | 1               |
+| arester          | 1            | reravaire         | 1               |
+| repromissïon     | 1            | reponcïon         | 1               |
+| lidorius         | 1            | lydorie           | 1               |
+| baril            | 1            | barrie            | 1               |
+| esclados         | 1            | esclat            | 1               |
+| verdor           | 1            | verdëor           | 1               |
+| escrever         | 1            | escrire           | 1               |
+| message1         | 1            | message2          | 1               |
+| pel1             | 1            | pal               | 1               |
+| trois+cent       | 1            | cent              | 1               |
+| fauz             | 1            | faus              | 1               |
+| deversité        | 1            | diverseté         | 1               |
+| mil1             | 1            | je                | 1               |
+| fais             | 1            | faire             | 1               |
+| pers             | 1            | per               | 1               |
+| mont             | 1            | monde1            | 1               |
+| saint-michel     | 1            | michiel           | 1               |
+| je+le            | 1            | je+il             | 1               |
+| traitier         | 1            | traire            | 1               |
+| namur            | 1            | nazmor            | 1               |
+| some2            | 1            | some3             | 1               |
+| secorer          | 1            | secorre1          | 1               |
+| ardor            | 1            | ardre             | 1               |
+| flore            | 1            | flaviz            | 1               |
+| lait2            | 1            | lait3             | 1               |
+| penser           | 1            | paistre           | 1               |
+| mongiu           | 1            | mongilon          | 1               |
+| temple3          | 1            | temple1           | 1               |
+| salomon          | 1            | salemon           | 1               |
+| äimant           | 1            | amien             | 1               |
+| keu              | 1            | que2+il           | 1               |
+| alener           | 1            | aleine            | 1               |
+| comune           | 1            | comun             | 1               |
+| hostilius        | 1            | oviles            | 1               |
+| pëor             | 1            | pöoir             | 1               |
+| hernaut          | 1            | herant            | 1               |
+| acier            | 1            | achier            | 1               |
+| dragoncel        | 1            | dragoncle         | 1               |
+| saner            | 1            | saignier          | 1               |
+| asservir         | 1            | asseoir           | 1               |
+| precier          | 1            | prëechier         | 1               |
+| pié              | 1            | poi               | 1               |
+| lait1            | 1            | lé                | 1               |
+| covir            | 1            | covenir           | 1               |
+| sulïant          | 1            | sivre             | 1               |
+| bastir           | 1            | batre             | 1               |
+| repaiier         | 1            | repairier         | 1               |
+| demore           | 1            | demorer           | 1               |
+| secorre1         | 1            | secors            | 1               |
+| oiance           | 1            | oigne             | 1               |
+| dent1            | 1            | adens             | 1               |
+| chainsil         | 1            | chaillon          | 1               |
+| paistre          | 1            | postre            | 1               |
+| fun              | 1            | fum               | 1               |
+| lober            | 1            | lobier            | 1               |
+| setme            | 1            | semer1            | 1               |
+| ardre            | 1            | hardi             | 1               |
+| deluge           | 1            | diligent          | 1               |
+| parfaire         | 1            | parfait           | 1               |
+| gaster           | 1            | gast1             | 1               |
+| tolir            | 1            | tot               | 1               |
+| percier          | 1            | porcier2          | 1               |
+| piscenie         | 1            | pisence           | 1               |
+| devin2           | 1            | devin1            | 1               |
+| tort2            | 1            | tours             | 1               |
+| oier             | 1            | oir               | 1               |
+| ferement         | 1            | ferrement         | 1               |
+| entier           | 1            | entir             | 1               |
+| armaire          | 1            | amor              | 1               |
+| mes4             | 1            | mon1              | 1               |
+| las              | 1            | he_las            | 1               |
+| öil              | 1            | onc               | 1               |
+| enchapeler       | 1            | enchaper          | 1               |
+| mes3             | 1            | mon1              | 1               |
+| atenir           | 1            | atendre           | 1               |
+| catorzime        | 1            | catorne)          | 1               |
+| fëel             | 1            | felon             | 1               |
+| faille1          | 1            | faille3           | 1               |
+| ensancmesler     | 1            | ensembler         | 1               |
+| chiere           | 1            | chier             | 1               |
+| cesaire          | 1            | cesar             | 1               |
+| chenir           | 1            | chëoir            | 1               |
+| alöer1           | 1            | alöer2            | 1               |
+| tire1            | 1            | tire2             | 1               |
+| aele             | 1            | aiuele            | 1               |
+| pöoir            | 1            | poissant          | 1               |
+| oisos            | 1            | oisel             | 1               |
+| croiz            | 1            | crucefiier        | 1               |
+| nef2             | 1            | nés               | 1               |
+| paisible         | 1            | parmanable        | 1               |
+| or1              | 1            | ors               | 1               |
+| ancessor         | 1            | anceor            | 1               |
+| patronage        | 1            | patremoine        | 1               |
+| haitement        | 1            | haitieement       | 1               |
+| feste            | 1            | feste1            | 1               |
+| son3             | 1            | son1              | 1               |
+| lié1             | 1            | lé                | 1               |
+| salatrés         | 1            | salirater         | 1               |
+| fouchier         | 1            | forchier          | 1               |
+| arc              | 1            | ardre             | 1               |
+| enföir2          | 1            | enfuser           | 1               |
+| envenimëor       | 1            | envolier          | 1               |
+| mescrëant        | 1            | mescroire         | 1               |
+| atorner          | 1            | ateler            | 1               |
+| os2              | 1            | ost               | 1               |
+| somer            | 1            | somenir           | 1               |
+| laver            | 1            | lever             | 1               |
+| voler            | 1            | voloir            | 1               |
+| jante1           | 1            | gent2             | 1               |
+| resortir         | 1            | restre            | 1               |
+| cinc             | 1            | cent              | 1               |
+| forfait          | 1            | forfaire          | 1               |
+| umble            | 1            | honble            | 1               |
+| servïable        | 1            | serviable         | 1               |
+| deschaitiver     | 1            | decheiefier       | 1               |
+| sanc             | 1            | sens              | 1               |
+| grieu            | 1            | grec              | 1               |
+| guenes           | 1            | ganelon           | 1               |
+| foillu           | 1            | folos             | 1               |
+| sauvëor          | 1            | sauver            | 1               |
+| garantissëor     | 1            | garantisorie      | 1               |
+| poing            | 1            | puis              | 1               |
+| coper            | 1            | cope1             | 1               |
+| roidement        | 1            | redement          | 1               |
+| roit1            | 1            | redoter1          | 1               |
+| grëer            | 1            | gras              | 1               |
+| frois2           | 1            | frois1            | 1               |
+| alentir          | 1            | eslantier         | 1               |
+| sospite          | 1            | sospiter          | 1               |
+| affricant        | 1            | afrique           | 1               |
+| sovin            | 1            | solivent          | 1               |
+| tisteresce       | 1            | tristece          | 1               |
+| chaille          | 1            | ciel              | 1               |
+| chalende         | 1            | kalende           | 1               |
+| levre            | 1            | lievre            | 1               |
+| joier            | 1            | jöer              | 1               |
+| monde2           | 1            | monde1            | 1               |
+| nüe              | 1            | nu1               | 1               |
+| rentiz           | 1            | rentir            | 1               |
+| rose             | 1            | ros3              | 1               |
+| lais             | 1            | lez               | 1               |
+| renge2           | 1            | renge1            | 1               |
+| los1             | 1            | lou               | 1               |
+| resoignier       | 1            | ressoignier       | 1               |
+| mahumet          | 1            | mohom             | 1               |
+| raison           | 1            | restre            | 1               |
+| voisdie          | 1            | voistois          | 1               |
+| veillerie        | 1            | veillier2         | 1               |
+| cors2            | 1            | cuer2             | 1               |
+| massi            | 1            | massiz            | 1               |
+| trone            | 1            | tronse            | 1               |
+| prodome          | 1            | pro               | 1               |
+| conter           | 1            | conte1            | 1               |
+| longement        | 1            | longement2        | 1               |
+| gracien          | 1            | gracin            | 1               |
+| despit           | 1            | despire           | 1               |
+| sëur2            | 1            | sor1              | 1               |
+| guingomar        | 1            | guinganbresil     | 1               |
+| onestement       | 1            | oneste            | 1               |
+| vigile           | 1            | vigele            | 1               |
+| trait            | 1            | traire            | 1               |
+| mener            | 1            | moine1            | 1               |
+| vezïé            | 1            | vëoir             | 1               |
+| perpetuus        | 1            | valentinien       | 1               |
+| ferrant          | 1            | ferir             | 1               |
+| ferëiz           | 1            | ferir             | 1               |
+| esteindre        | 1            | ester             | 1               |
+| flamesche        | 1            | flame             | 1               |
+| antiene          | 1            | entevel           | 1               |
+| comé             | 1            | comencier         | 1               |
+| föir             | 1            | fuir              | 1               |
+| deseur(e)        | 1            | desor             | 1               |
+| pardonement      | 1            | pordement         | 1               |
+| resconser        | 1            | rescorre          | 1               |
+| reflamboiier     | 1            | reflambir         | 1               |
+| esploitier       | 1            | eslaistre         | 1               |
+| movoir           | 1            | müir2             | 1               |
+| respondre1       | 1            | response          | 1               |
+| descochier1      | 1            | descochier        | 1               |
+| euvagius         | 1            | evagu             | 1               |
+| contendre        | 1            | contenir          | 1               |
+| nés              | 1            | nëis              | 1               |
+| singe            | 1            | signe1            | 1               |
+| destrosser       | 1            | destroistre       | 1               |
+| enamer           | 1            | enmaner           | 1               |
+| crïator          | 1            | crïature          | 1               |
+| esforcier2       | 1            | esforcier1        | 1               |
+| boniface         | 1            | bonefauté         | 1               |
+| mivoie           | 1            | mivüe             | 1               |
+| assemblee        | 1            | assembler         | 1               |
+| evesque          | 1            | veinque           | 1               |
+| terrion          | 1            | terrïon           | 1               |
+| descovrir        | 1            | descorder1        | 1               |
+| trebace          | 1            | trebelliant       | 1               |
+| manche2          | 1            | mace              | 1               |
+| arcediacne       | 1            | marchëant         | 1               |
+| laurante         | 1            | laure             | 1               |
+| lumbardie        | 1            | lombardie         | 1               |
+| fein             | 1            | faim              | 1               |
+| resplenir        | 1            | replenier         | 1               |
+| seneficacïon     | 1            | sentisïon         | 1               |
+| eusebius         | 1            | evois             | 1               |
+| remander         | 1            | remanoir          | 1               |
+| ameor            | 1            | amer2             | 1               |
+| uit              | 1            | set               | 1               |
+| coutre           | 1            | coutré            | 1               |
+| juene            | 1            | jombe2            | 1               |
+| emplir           | 1            | amplir            | 1               |
+| desert2          | 1            | desert1           | 1               |
+| pic2             | 1            | piz               | 1               |
+| racheminer       | 1            | rachier2          | 1               |
+| porparler        | 1            | porperlaire       | 1               |
+| alaitier         | 1            | aler              | 1               |
+| arimathie        | 1            | arimatie          | 1               |
+| chemin           | 1            | chäeine           | 1               |
+| quel1            | 1            | que2+il           | 1               |
+| tendre2          | 1            | tendre1           | 1               |
+| culvert          | 1            | covrier           | 1               |
+| fermeté          | 1            | formeté           | 1               |
+| ostel            | 1            | oster2            | 1               |
+| pentecoste1      | 1            | pentecoste        | 1               |
+| hupe             | 1            | huepe             | 1               |
+| samsun           | 1            | sanses            | 1               |
+| bone             | 1            | bon               | 1               |
+| soie2            | 1            | soi1              | 1               |
+| doloir           | 1            | dolent            | 1               |
+| tantalis         | 1            | tantalin          | 1               |
+| detenement       | 1            | deteniere         | 1               |
+| vivant           | 1            | vivre1            | 1               |
+| ventrail         | 1            | ventre1           | 1               |
+| excepcïon        | 1            | escepcïon         | 1               |
+| ente             | 1            | hanste            | 1               |
+| concevement      | 1            | conseil           | 1               |
+| alegement        | 1            | alegant           | 1               |
+| des2             | 1            | de+le             | 1               |
+| faissel          | 1            | faillier1         | 1               |
+| arragon          | 1            | aragon            | 1               |
+| estrange         | 1            | estrangier2       | 1               |
+| bucie            | 1            | burie             | 1               |
+| risoaudus        | 1            | ruspit            | 1               |
+| eucherius        | 1            | euchion           | 1               |
+| celsus           | 1            | clasun            | 1               |
+| devenir          | 1            | deviser           | 1               |
+| air1             | 1            | air2              | 1               |
+| or4              | 1            | or1               | 1               |
+| nëel1            | 1            | noil              | 1               |
+| fabur            | 1            | faurbre           | 1               |
+| ogre             | 1            | orgene            | 1               |
+| ars              | 1            | ardre             | 1               |
+| conquester       | 1            | conquerre         | 1               |
+| sorcot           | 1            | sorcuier          | 1               |
+| sens             | 1            | serf              | 1               |
+| introduire       | 1            | entredout         | 1               |
+| pardoner         | 1            | pordin            | 1               |
+| larmoiier        | 1            | larmer            | 1               |
+| fils2            | 1            | fil2              | 1               |
+| vers1            | 1            | vers2             | 1               |
+| doible           | 1            | dïable            | 1               |
+| benëir           | 1            | beneoit           | 1               |
+| deraisnier       | 1            | desraisnier       | 1               |
+| rescosse         | 1            | recusse           | 1               |
+| dusque           | 1            | donc              | 1               |
+| mi2              | 1            | mie               | 1               |
+| dure             | 1            | dur               | 1               |
+| mercure          | 1            | mercurie          | 1               |
+| pui              | 1            | puiz              | 1               |
+| blasmer          | 1            | blasme            | 1               |
+| guischart        | 1            | guistance         | 1               |
+| aclarir          | 1            | aclareillier      | 1               |
+| cincante+mil1    | 1            | le                | 1               |
+| garlandesche     | 1            | garlement         | 1               |
+| rurtius          | 1            | rufustuis         | 1               |
+| taborois         | 1            | tabort            | 1               |
+| aboser           | 1            | abaissier         | 1               |
+| mari             | 1            | marrir            | 1               |
+| celerier         | 1            | celeriers         | 1               |
+| eve              | 1            | aigue             | 1               |
+| mïete            | 1            | metier            | 1               |
+| lou              | 1            | love              | 1               |
+| estraier3        | 1            | estraier1         | 1               |
+| regarder         | 1            | reposer           | 1               |
+| damnedeu         | 1            | damnedieu         | 1               |
+| plaindre         | 1            | plein             | 1               |
+| gent1            | 1            | gent2             | 1               |
+| afit2            | 1            | afi2              | 1               |
+| cotoatre         | 1            | couter            | 1               |
+| crëant           | 1            | croire            | 1               |
+| essaiement       | 1            | assagement        | 1               |
+| profetisier      | 1            | porfhatier        | 1               |
+| onor             | 1            | henor             | 1               |
+| voier            | 1            | voiier1           | 1               |
+| foi              | 1            | foiz              | 1               |
+| paille           | 1            | paile             | 1               |
+| nate2            | 1            | nate              | 1               |
+| deshait          | 1            | dehé              | 1               |
+| träitor          | 1            | traite            | 1               |
+| trois            | 1            | très              | 1               |
+| cor2             | 1            | cort1             | 1               |
+| faus             | 1            | fausser           | 1               |
+| pieç'a           | 1            | piece             | 1               |
+| resne2           | 1            | rede              | 1               |
+| hiraut           | 1            | harmer            | 1               |
+| i2               | 1            | un                | 1               |
+| enganer          | 1            | engandre          | 1               |
+| faussement       | 1            | fauvement         | 1               |
+| troias           | 1            | troian            | 1               |
+| planer2          | 1            | plenier1          | 1               |
+| ëur              | 1            | ore3              | 1               |
+| lance            | 1            | lancier3          | 1               |
+| jëuner           | 1            | grieté            | 1               |
+| flor1            | 1            | flot1             | 1               |
+| porprendre       | 1            | porpendre         | 1               |
+| embler           | 1            | enfler            | 1               |
+| bon              | 1            | meillor           | 1               |
+| pener            | 1            | peine             | 1               |
+| vif              | 1            | vis1              | 1               |
+| röeler           | 1            | röeillier         | 1               |
+| duit             | 1            | doi               | 1               |
+| jeter            | 1            | metre2            | 1               |
+| por2+cant2       | 1            | porcant           | 1               |
+| buison           | 1            | flum              | 1               |
+| landuc           | 1            | landon            | 1               |
+| eschaitiver      | 1            | eschevir3         | 1               |
+| an               | 1            | enz               | 1               |
+| justicier1       | 1            | justicier2        | 1               |
+| thebes           | 1            | thiebaus          | 1               |
+| descouper        | 1            | decoper           | 1               |
+| arrogacion       | 1            | arracïon          | 1               |
+| volenté          | 1            | venté             | 1               |
+| près             | 1            | prest1            | 1               |
+| rongier2         | 1            | rombant           | 1               |
+| avers1           | 1            | avers2            | 1               |
+| arme             | 1            | harme             | 1               |
+| orle             | 1            | oler              | 1               |
+| oraille          | 1            | oreille           | 1               |
+| meule            | 1            | mol               | 1               |
+| antif            | 1            | entier            | 1               |
+| ling2            | 1            | lin               | 1               |
+| fondre           | 1            | fonder2           | 1               |
+| boivre           | 1            | boire             | 1               |
+| räoncler         | 1            | röeillier         | 1               |
+| octembre         | 1            | omecite           | 1               |
+| magine           | 1            | margine           | 1               |
+| travers          | 1            | traverser         | 1               |
+| etiope           | 1            | etephien          | 1               |
+| orribleté        | 1            | orfenité          | 1               |
+| desjoinccïon     | 1            | distincïon        | 1               |
+| empirier         | 1            | empire            | 1               |
+| lois             | 1            | loi3              | 1               |
+| sosprendre       | 1            | sofrir            | 1               |
+| batisier         | 1            | pitié             | 1               |
+| escarflaires     | 1            | escarfales        | 1               |
+| flot2            | 1            | flot1             | 1               |
+| plaire           | 1            | plait             | 1               |
+| por2             | 1            | porcant           | 1               |
+| ressaucier       | 1            | ressalir          | 1               |
+| jugier           | 1            | jeher             | 1               |
+| cordöan          | 1            | cordande          | 1               |
+| muse4            | 1            | mu1               | 1               |
+| estive1          | 1            | estieu            | 1               |
+| lige             | 1            | lege              | 1               |
+| ytace            | 1            | isaut             | 1               |
+| compagne1        | 1            | compagnie         | 1               |
+| ortiier2         | 1            | ortir             | 1               |
+| vieillart        | 1            | vieillar          | 1               |
+| moiste           | 1            | moitier           | 1               |
+| soudee           | 1            | soudoiier1        | 1               |
+| corporel         | 1            | corporer2         | 1               |
+| boistos          | 1            | boivre            | 1               |
+| enfleüre         | 1            | enflëure          | 1               |
+| partir           | 1            | part1             | 1               |
+| hertald          | 1            | hetrelant         | 1               |
+| siglaton         | 1            | siglas            | 1               |
+| defense          | 1            | sembre            | 1               |
+| a1               | 1            | a3+le             | 1               |
+| derrenier        | 1            | däerrain          | 1               |
+| aüste            | 1            | chaste            | 1               |
+| plesence         | 1            | plance            | 1               |
+| melan            | 1            | mesler            | 1               |
+| coutiver         | 1            | couriver          | 1               |
+| hardement        | 1            | ardement          | 1               |
+| engolé           | 1            | engoler           | 1               |
+| saint-gilles     | 1            | gile              | 1               |
 
-# POS 
+# POS
 
 ```
 all:
-  accuracy: 0.9613
-  precision: 0.7828
-  recall: 0.7572
-  support: 48317
+  accuracy: 0.9659
+  precision: 0.7668
+  recall: 0.7493
+  support: 50379
 ambiguous-tokens:
-  accuracy: 0.9549
-  precision: 0.7888
-  recall: 0.753
-  support: 32232
+  accuracy: 0.9577
+  precision: 0.7644
+  recall: 0.7614
+  support: 32318
 unknown-tokens:
-  accuracy: 0.8677
-  precision: 0.5959
-  recall: 0.5918
-  support: 1792
+  accuracy: 0.8851
+  precision: 0.6107
+  recall: 0.6509
+  support: 1627
 ```
 
 | Expected      | Total Errors | Predictions   | Predicted times |
 |---------------|--------------|---------------|-----------------|
-| NOMcom        | 247          | ADJqua        | 76              |
-|               |              | ADVgen        | 32              |
-|               |              | VERcjg        | 29              |
-|               |              | VERppe        | 28              |
-|               |              | NOMpro        | 22              |
-|               |              | VERinf        | 22              |
-|               |              | PROind        | 12              |
-|               |              | VERppa        | 6               |
-|               |              | ADVneg        | 4               |
-|               |              | OUT           | 4               |
-|               |              | PRE           | 3               |
-|               |              | PROcar        | 2               |
-|               |              | PROrel        | 1               |
-|               |              | PROadv        | 1               |
-|               |              | ADVsub        | 1               |
-|               |              | PROper        | 1               |
+| NOMcom        | 260          | ADJqua        | 75              |
+|               |              | ADVgen        | 36              |
+|               |              | VERcjg        | 34              |
+|               |              | VERinf        | 29              |
+|               |              | NOMpro        | 26              |
+|               |              | VERppe        | 25              |
+|               |              | PROind        | 11              |
+|               |              | ADVneg        | 9               |
+|               |              | PROper        | 3               |
+|               |              | PRE           | 2               |
+|               |              | VERppa        | 2               |
+|               |              | DETpos        | 2               |
+|               |              | PROord        | 1               |
+|               |              | CONcoo        | 1               |
 |               |              | ADJcar        | 1               |
-|               |              | PRE.DETdef    | 1               |
-|               |              | DETind        | 1               |
-| CONsub        | 146          | PROrel        | 62              |
-|               |              | CONcoo        | 52              |
-|               |              | ADVgen        | 15              |
+|               |              | PROrel        | 1               |
+|               |              | DETrel        | 1               |
+|               |              | DETdef        | 1               |
+| CONsub        | 165          | PROrel        | 81              |
+|               |              | CONcoo        | 63              |
 |               |              | PROper        | 7               |
+|               |              | ADVgen        | 5               |
 |               |              | ADVint        | 4               |
-|               |              | PROint        | 2               |
+|               |              | ADVsub        | 2               |
 |               |              | PROdem        | 2               |
-|               |              | ADVsub        | 1               |
-|               |              | DETpos        | 1               |
-| ADVgen        | 144          | NOMcom        | 25              |
-|               |              | PRE           | 21              |
-|               |              | PROind        | 18              |
-|               |              | CONsub        | 13              |
+|               |              | DETcar        | 1               |
+| ADVgen        | 139          | NOMcom        | 29              |
+|               |              | PRE           | 25              |
+|               |              | PROind        | 16              |
+|               |              | ADJqua        | 13              |
 |               |              | PROper        | 12              |
-|               |              | ADJqua        | 10              |
-|               |              | CONcoo        | 8               |
-|               |              | DETind        | 7               |
-|               |              | VERcjg        | 6               |
-|               |              | DETdef        | 5               |
-|               |              | PROrel        | 4               |
-|               |              | VERinf        | 2               |
-|               |              | ADJind        | 2               |
-|               |              | NOMpro        | 2               |
-|               |              | DETpos        | 1               |
+|               |              | CONcoo        | 9               |
+|               |              | CONsub        | 6               |
+|               |              | DETind        | 6               |
+|               |              | VERcjg        | 5               |
+|               |              | PROrel        | 3               |
+|               |              | ADVneg.PROper | 2               |
+|               |              | VERppa        | 2               |
+|               |              | DETdef        | 2               |
+|               |              | DETpos        | 2               |
 |               |              | VERppe        | 1               |
 |               |              | PROord        | 1               |
-|               |              | ADVsub        | 1               |
-|               |              | ADVgen.PROper | 1               |
-|               |              | PROadv        | 1               |
-|               |              |               | 1               |
-|               |              | ADVneg        | 1               |
+|               |              | VERinf        | 1               |
+|               |              | DETdem        | 1               |
+|               |              | NOMpro        | 1               |
 |               |              | PROint        | 1               |
-| ADJqua        | 131          | NOMcom        | 68              |
+|               |              | ADJind        | 1               |
+| CONcoo        | 113          | CONsub        | 67              |
+|               |              | ADVneg        | 27              |
+|               |              | ADVgen        | 10              |
+|               |              | PROrel        | 7               |
+|               |              | DETpos        | 1               |
+|               |              | PRE.DETdef    | 1               |
+| ADJqua        | 108          | NOMcom        | 61              |
 |               |              | VERppe        | 17              |
-|               |              | ADVgen        | 13              |
-|               |              | VERcjg        | 9               |
-|               |              | VERppa        | 6               |
-|               |              | OUT           | 4               |
-|               |              | NOMpro        | 4               |
-|               |              | PRE           | 3               |
-|               |              | PROind        | 2               |
-|               |              | PROper        | 1               |
-|               |              | DETcar        | 1               |
-|               |              | ADJpos        | 1               |
-|               |              | VERinf        | 1               |
-|               |              | ADJind        | 1               |
-| CONcoo        | 129          | CONsub        | 75              |
-|               |              | ADVneg        | 29              |
-|               |              | PROrel        | 13              |
-|               |              | ADVgen        | 9               |
-|               |              | VERcjg        | 1               |
-|               |              | DETpos        | 1               |
-|               |              | PRE.DETdef    | 1               |
-| VERcjg        | 114          | NOMcom        | 35              |
-|               |              | VERppe        | 32              |
-|               |              | PRE           | 29              |
-|               |              | ADJqua        | 6               |
-|               |              | ADVgen        | 4               |
-|               |              | PRE.DETdef    | 3               |
-|               |              | VERinf        | 3               |
-|               |              | ADJind        | 1               |
-|               |              | PROper        | 1               |
-| PROrel        | 102          | CONsub        | 77              |
-|               |              | PROint        | 8               |
-|               |              | CONcoo        | 7               |
-|               |              | ADVgen        | 6               |
-|               |              | DETrel        | 3               |
-|               |              | NOMcom        | 1               |
-| VERppe        | 82           | VERcjg        | 33              |
-|               |              | NOMcom        | 30              |
-|               |              | ADJqua        | 12              |
-|               |              | ADJpos        | 2               |
-|               |              | VERinf        | 1               |
-|               |              | OUT           | 1               |
-|               |              | VERppa        | 1               |
-|               |              | ADVgen        | 1               |
-|               |              | PROper        | 1               |
-| PROper        | 74           | DETdef        | 27              |
-|               |              | PROimp        | 18              |
 |               |              | ADVgen        | 8               |
-|               |              | PROind        | 7               |
-|               |              | DETpos        | 6               |
-|               |              | PROadv        | 3               |
-|               |              | CONsub        | 3               |
-|               |              | PROpos        | 1               |
-|               |              | NOMcom        | 1               |
-| PROimp        | 72           | PROper        | 72              |
-| PRE           | 70           | ADVgen        | 29              |
-|               |              | VERcjg        | 16              |
-|               |              | PROadv        | 9               |
-|               |              | NOMcom        | 4               |
-|               |              | PROind        | 4               |
-|               |              | CONcoo        | 3               |
-|               |              | ADJqua        | 2               |
-|               |              | NOMpro        | 1               |
-|               |              | PROint        | 1               |
-|               |              | VERinf        | 1               |
-| OUT           | 65           | NOMcom        | 19              |
-|               |              | ADJqua        | 9               |
-|               |              | VERcjg        | 6               |
-|               |              | ADVgen        | 5               |
-|               |              | NOMpro        | 5               |
-|               |              | VERppe        | 5               |
-|               |              | ADVneg        | 3               |
-|               |              | DETpos        | 3               |
-|               |              | CONcoo        | 1               |
-|               |              | PROper        | 1               |
-|               |              | VERppa        | 1               |
-|               |              | PROdem        | 1               |
-|               |              | VERinf        | 1               |
-|               |              | PROrel        | 1               |
-|               |              | PRE           | 1               |
-|               |              | DETdem        | 1               |
-|               |              | PROint        | 1               |
-|               |              | DETdef        | 1               |
-| PROind        | 61           | ADVgen        | 17              |
-|               |              | DETind        | 13              |
-|               |              | NOMcom        | 12              |
-|               |              | ADJind        | 7               |
-|               |              | DETndf        | 4               |
-|               |              | PROadv        | 2               |
-|               |              | PROper        | 2               |
-|               |              | PRE           | 1               |
-|               |              | ADJqua        | 1               |
-|               |              | VERcjg        | 1               |
-|               |              | PRE.DETdef    | 1               |
-| NOMpro        | 45           | NOMcom        | 24              |
-|               |              | VERinf        | 6               |
-|               |              | VERcjg        | 4               |
-|               |              | ADVgen        | 3               |
-|               |              | ADJqua        | 2               |
-|               |              | VERppe        | 2               |
-|               |              | DETind        | 1               |
-|               |              | CONcoo        | 1               |
-|               |              | VERppa        | 1               |
-|               |              | DETcar        | 1               |
-| DETind        | 36           | PROind        | 15              |
-|               |              | ADVgen        | 9               |
-|               |              | ADJind        | 5               |
-|               |              | ADJqua        | 4               |
-|               |              | NOMcom        | 1               |
-|               |              | DETndf        | 1               |
-|               |              | PROdem        | 1               |
-| DETcar        | 30           | DETndf        | 17              |
-|               |              | ADJcar        | 4               |
-|               |              | PROcar        | 3               |
-|               |              | NOMcom        | 2               |
-|               |              | VERcjg        | 1               |
-|               |              | ADJord        | 1               |
-|               |              | NOMpro        | 1               |
-|               |              | PROind        | 1               |
-| VERinf        | 30           | NOMcom        | 25              |
-|               |              | VERcjg        | 2               |
-|               |              | ADJqua        | 2               |
-|               |              | NOMpro        | 1               |
-| PROcar        | 27           | ADJcar        | 9               |
-|               |              | DETcar        | 8               |
-|               |              | PROind        | 4               |
-|               |              | VERppe        | 1               |
-|               |              | NOMpro        | 1               |
-|               |              | DETndf        | 1               |
-|               |              | PROper        | 1               |
-|               |              | NOMcom        | 1               |
-|               |              | CONsub        | 1               |
-| ADVneg        | 26           | CONcoo        | 20              |
-|               |              | NOMcom        | 4               |
-|               |              | ADVgen        | 1               |
-|               |              | PROind        | 1               |
-| DETpos        | 25           | ADJpos        | 9               |
-|               |              | PROper        | 9               |
-|               |              | ADVgen        | 5               |
-|               |              | OUT           | 1               |
-|               |              | PROpos        | 1               |
-| DETdef        | 21           | PROper        | 19              |
-|               |              | ADVgen        | 2               |
-| PROdem        | 20           | DETdem        | 13              |
+|               |              | NOMpro        | 7               |
+|               |              | VERppa        | 5               |
 |               |              | VERcjg        | 3               |
-|               |              | CONsub        | 2               |
-|               |              | NOMcom        | 1               |
+|               |              | PRE           | 2               |
+|               |              | DETcar        | 2               |
+|               |              | PROind        | 2               |
+|               |              | DETind        | 1               |
+| VERcjg        | 104          | VERppe        | 31              |
+|               |              | NOMcom        | 26              |
+|               |              | PRE           | 20              |
+|               |              | ADJqua        | 10              |
+|               |              | VERinf        | 5               |
+|               |              | ADVgen        | 4               |
+|               |              | CONcoo        | 2               |
+|               |              | DETpos        | 1               |
+|               |              | DETind        | 1               |
+|               |              | DETndf        | 1               |
+|               |              | PROper        | 1               |
+|               |              | PROpos        | 1               |
+|               |              | VERppa        | 1               |
+| PROrel        | 89           | CONsub        | 65              |
+|               |              | CONcoo        | 10              |
+|               |              | PROint        | 7               |
+|               |              | DETrel        | 4               |
+|               |              | PRE.DETdef    | 1               |
+|               |              | PROrel.PROper | 1               |
+|               |              | ADVint        | 1               |
+| PROper        | 79           | PROimp        | 33              |
+|               |              | DETdef        | 26              |
+|               |              | DETpos        | 5               |
+|               |              | ADVgen        | 4               |
+|               |              | CONsub        | 4               |
+|               |              | PROind        | 3               |
+|               |              | NOMcom        | 2               |
+|               |              | DETind        | 1               |
+|               |              | ADVneg        | 1               |
+| PROind        | 75           | ADVgen        | 22              |
+|               |              | DETind        | 18              |
+|               |              | ADJind        | 11              |
+|               |              | PRE           | 5               |
+|               |              | NOMcom        | 5               |
+|               |              | PROadv        | 4               |
+|               |              | DETndf        | 4               |
+|               |              | PROper        | 3               |
+|               |              | VERcjg        | 1               |
+|               |              | PROrel        | 1               |
+|               |              | ADVneg        | 1               |
+| VERppe        | 71           | VERcjg        | 40              |
+|               |              | NOMcom        | 17              |
+|               |              | ADJqua        | 10              |
+|               |              | PROdem        | 1               |
+|               |              | DETpos        | 1               |
 |               |              | ADVgen        | 1               |
-| PROint        | 19           | PROrel        | 14              |
-|               |              | DETrel        | 1               |
-|               |              | NOMcom        | 1               |
 |               |              | NOMpro        | 1               |
+| NOMpro        | 50           | NOMcom        | 35              |
+|               |              | ADJqua        | 4               |
+|               |              | VERcjg        | 3               |
+|               |              | VERppe        | 3               |
+|               |              | VERinf        | 2               |
+|               |              | VERppa        | 2               |
+|               |              | PRE           | 1               |
+| PRE           | 48           | ADVgen        | 23              |
+|               |              | VERcjg        | 15              |
+|               |              | ADJqua        | 3               |
+|               |              | PROadv        | 3               |
+|               |              | CONcoo        | 1               |
+|               |              | PROind        | 1               |
+|               |              | NOMcom        | 1               |
+|               |              | PRE.DETdef    | 1               |
+| PROimp        | 36           | PROper        | 34              |
+|               |              | PROadv        | 2               |
+| DETind        | 28           | PROind        | 10              |
+|               |              | ADVgen        | 8               |
+|               |              | ADJind        | 6               |
+|               |              | ADJqua        | 2               |
+|               |              | NOMcom        | 1               |
+|               |              | DETrel        | 1               |
+| DETcar        | 28           | DETndf        | 16              |
+|               |              | PROcar        | 7               |
+|               |              | ADJcar        | 3               |
+|               |              | DETdef        | 1               |
+|               |              | ADVgen        | 1               |
+| ADJind        | 27           | PROind        | 13              |
+|               |              | DETind        | 12              |
+|               |              | PROper        | 1               |
+|               |              | ADJqua        | 1               |
+| ADVneg        | 26           | CONcoo        | 17              |
+|               |              | NOMcom        | 5               |
+|               |              | ADVgen        | 3               |
+|               |              | PROind        | 1               |
+| DETdef        | 24           | PROper        | 20              |
+|               |              | OUT           | 2               |
 |               |              | DETdem        | 1               |
 |               |              | ADVgen        | 1               |
-| VERppa        | 16           | ADJqua        | 10              |
-|               |              | NOMpro        | 2               |
-|               |              | VERcjg        | 2               |
-|               |              | NOMcom        | 2               |
-| ADJind        | 16           | PROind        | 7               |
-|               |              | DETind        | 4               |
-|               |              | ADJqua        | 3               |
-|               |              | VERcjg        | 1               |
-|               |              | ADVgen        | 1               |
-| ADVsub        | 16           | CONsub        | 10              |
-|               |              | ADVgen        | 3               |
-|               |              | ADVint        | 3               |
-| ADJpos        | 13           | DETpos        | 10              |
-|               |              | PROpos        | 3               |
-| PROadv        | 11           | PRE           | 5               |
-|               |              | PROind        | 4               |
+| ADJpos        | 22           | DETpos        | 15              |
+|               |              | PROpos        | 5               |
+|               |              | VERppe        | 2               |
+| VERinf        | 22           | NOMcom        | 16              |
+|               |              | VERcjg        | 3               |
+|               |              | ADJqua        | 1               |
+|               |              | NOMpro        | 1               |
+|               |              | VERppe        | 1               |
+| DETpos        | 22           | ADJpos        | 8               |
+|               |              | PROper        | 7               |
+|               |              | ADVgen        | 5               |
+|               |              | PRE           | 1               |
+|               |              | CONcoo        | 1               |
+| PROcar        | 19           | DETcar        | 5               |
+|               |              | ADJcar        | 4               |
+|               |              | PROper        | 3               |
+|               |              | PROind        | 3               |
 |               |              | DETndf        | 1               |
-|               |              | PROrel        | 1               |
-| ADVint        | 11           | CONsub        | 10              |
-|               |              | ADVsub        | 1               |
-| DETdem        | 9            | PROdem        | 8               |
+|               |              | ADVgen        | 1               |
+|               |              | NOMcom        | 1               |
+|               |              | DETdef        | 1               |
+| PROint        | 18           | PROrel        | 14              |
+|               |              | CONsub        | 2               |
+|               |              | PROdem        | 1               |
+|               |              | CONcoo        | 1               |
+| PROdem        | 17           | DETdem        | 15              |
+|               |              | NOMcom        | 1               |
+|               |              | VERcjg        | 1               |
+| ADVint        | 15           | CONsub        | 8               |
+|               |              | ADVsub        | 4               |
+|               |              | ADVgen        | 2               |
+|               |              | PROint        | 1               |
+| PROadv        | 13           | PRE           | 7               |
+|               |              | DETndf        | 2               |
+|               |              | PROrel        | 2               |
+|               |              | ADVgen        | 1               |
+|               |              | CONsub        | 1               |
+| DETdem        | 13           | PROdem        | 12              |
 |               |              | DETpos        | 1               |
-| DETndf        | 9            | DETcar        | 5               |
+| VERppa        | 12           | ADJqua        | 6               |
+|               |              | NOMcom        | 2               |
+|               |              | VERppe        | 2               |
+|               |              | NOMpro        | 1               |
+|               |              | VERcjg        | 1               |
+| DETndf        | 10           | DETcar        | 7               |
 |               |              | PROind        | 2               |
 |               |              | PROadv        | 1               |
-|               |              | PROcar        | 1               |
-| PRE.DETdef    | 8            | CONcoo        | 3               |
+| PRE.DETdef    | 9            | CONcoo        | 8               |
+|               |              | VERcjg        | 1               |
+| ADJcar        | 9            | PROcar        | 4               |
+|               |              | DETcar        | 2               |
+|               |              | PROord        | 1               |
+|               |              | NOMcom        | 1               |
+|               |              | VERcjg        | 1               |
+| PROord        | 8            | NOMcom        | 4               |
+|               |              | ADJord        | 2               |
+|               |              | VERcjg        | 1               |
+|               |              | ADJqua        | 1               |
+| OUT           | 7            | DETdef        | 2               |
 |               |              | PROper        | 2               |
-|               |              | PROrel        | 1               |
-|               |              | VERcjg        | 1               |
-|               |              | PRE           | 1               |
-| ADJcar        | 7            | DETcar        | 5               |
-|               |              | PROcar        | 1               |
-|               |              | ADJord        | 1               |
-|               | 7            | ADJqua        | 1               |
-|               |              | PROper        | 1               |
-|               |              | VERinf        | 1               |
-|               |              | DETdef        | 1               |
+|               |              | VERppe        | 1               |
 |               |              | PROadv        | 1               |
-|               |              | PRE           | 1               |
-|               |              | CONcoo        | 1               |
-| DETrel        | 6            | PROrel        | 3               |
-|               |              | DETint        | 3               |
-| PROpos        | 5            | ADJpos        | 5               |
+|               |              | NOMcom        | 1               |
+| ADVsub        | 7            | CONsub        | 4               |
+|               |              | ADVint        | 3               |
+| ADJord        | 6            | PROord        | 4               |
+|               |              | ADJqua        | 2               |
 | DETint        | 4            | DETrel        | 4               |
-| PROord        | 4            | ADJord        | 3               |
-|               |              | VERcjg        | 1               |
-| INJ           | 3            | VERcjg        | 3               |
-| PRE.PROper    | 2            | PRE.DETdef    | 1               |
+|               | 2            | PRE.DETdef    | 2               |
+| PROpos        | 2            | ADJpos        | 2               |
+| INJ           | 2            | NOMcom        | 1               |
 |               |              | CONcoo        | 1               |
-| ADVneg.PROper | 1            | PROper        | 1               |
-| CONsubs       | 1            | CONsub        | 1               |
+| DETrel        | 2            | DETint        | 1               |
+|               |              | PROrel.PROper | 1               |
+| PRE.PROper    | 1            | PRE.DETdef    | 1               |
 | ADVgen.PROadv | 1            | ADVgen        | 1               |
-| DETord        | 1            | ADJqua        | 1               |
-| PROrel.PROper | 1            | CONsub        | 1               |
+| VERcj         | 1            | NOMcom        | 1               |
+| RED           | 1            | CONsub        | 1               |
+| PRE.PROind    | 1            | ADVgen        | 1               |

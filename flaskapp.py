@@ -4,7 +4,7 @@ from flask import Flask, render_template
 
 from flask_pie import PieController
 from flask_pie.utils import Formatter, DataIterator
-
+from flask_pie.formatters.glue import GlueFormatter as SourceGlueFormatter
 
 app = Flask(__name__, static_folder="./statics", template_folder="./templates")
 
@@ -18,38 +18,38 @@ def form():
 uppercase = re.compile("^[A-Z]$")
 
 
-class GlueFormatter(Formatter):
+class GlueFormatter(SourceGlueFormatter):
     HEADERS = ["form", "lemma", "POS", "morph"]
     MORPH_PART = ["MODE", "TEMPS", "PERS.", "NOMB.", "GENRE", "CAS", "DEGRE"]
-    PONCTU = re.compile("\W+")
-    NUMBER = re.compile("\d+")
+
+    PONCTU = re.compile(r"^\W+$")
+    NUMBER = re.compile(r"\d+")
     PONFORT = [".", "...", "!", "?"]
 
     def __init__(self, tasks):
-        super(GlueFormatter, self).__init__(tasks)
+        self.tasks = tasks
         self.pos_tag = "POS"
         if "POS" not in self.tasks and "pos" in self.tasks:
             self.pos_tag = "pos"
 
-    def format_headers(self):
-        return GlueFormatter.HEADERS
-
-    def format_line(self, token, tags):
-        tags = list(tags)
-        lemma = tags[self.tasks.index("lemma")]
-        if GlueFormatter.PONCTU.match(token):
+    def rule_based(cls, token):
+        if cls.PONCTU.match(token):
             lemma = token
             if token in GlueFormatter.PONFORT:
                 pos = "PONfrt"
             else:
                 pos = "PONfbl"
-            return [
-                token,
-                lemma,
-                pos,
-                "MORPH=empty"
-            ]
-        elif GlueFormatter.NUMBER.match(token):
+            return [token, lemma, pos, "MORPH=empty"]
+
+    def format_line(self, token, tags, ignored=False):
+        tags = list(tags)
+        lemma = tags[self.tasks.index("lemma")]
+
+        overwriten = self.rule_based(token)
+        if overwriten:
+            return overwriten
+
+        if type(self).NUMBER.match(token):
             lemma = token
             tags[self.tasks.index(self.pos_tag)] = "ADJcar"
 
@@ -72,7 +72,10 @@ class GlueFormatter(Formatter):
 controller = PieController(
     model_file="<morph.tar,MODE,TEMPS,PERS,NOMB,GENRE,CAS,DEGRE><lemma-pos.tar,lemma,pos>",
     headers={"X-Accel-Buffering": "no"},
-    formatter_class=GlueFormatter, batch_size=16
+    formatter_class=GlueFormatter, batch_size=16,
+    iterator=DataIterator(
+        remove_from_input=DataIterator.remove_punctuation
+    )
 )
 controller.init_app(app)
 

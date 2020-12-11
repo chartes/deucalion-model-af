@@ -3,6 +3,9 @@ Deucalion Model Ancien Français ENC
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2539134.svg)](https://doi.org/10.5281/zenodo.2539134)
 
+## Model files
+
+Because models are large files, only Markdown is kept in this repository. Find the latest model in the [Release tab](https://github.com/chartes/deucalion-model-af/releases/latest)
 
 ## Cite As
 

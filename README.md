@@ -49,6 +49,7 @@ More information on the annotation practice can be found in the wiki of the _Ges
 
 Sample from annotation:
 
+<<<<<<< HEAD
 ```tsv
 form	lemma	POS	morph
 G'	je	PROper	PERS.=1|NOMB.=s|GENRE=m|CAS=n

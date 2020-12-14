@@ -11,16 +11,19 @@ Because models are large files, only Markdown is kept in this repository. Find t
 
 ```bibtex
 @software{clerice_thibault_2019_3237455,
-  author       = {Clérice, Thibault and
-                  Camps, Jean-Baptiste and
-                  Pinche, Ariane},
-  title        = {Deucalion, Modèle Ancien Francais (0.2.0)},
-  month        = jun,
-  year         = 2019,
+  author       = {Camps, Jean-Baptiste and
+                  Clérice, Thibault and
+                  Pinche, Ariane and
+                  Ing, Lucence and
+                  Duval, Frédéric and
+                  Kanaoka, Naomi},
+  title        = {Deucalion, Modèle Ancien Francais (0.3.0)},
+  month        = dec,
+  year         = 2020,
   publisher    = {Zenodo},
-  version      = {v0.2.0},
-  doi          = {10.5281/zenodo.3237455},
-  url          = {https://doi.org/10.5281/zenodo.3237455}
+  version      = {v0...0},
+  doi          = {10.5281/zenodo.4320487},
+  url          = {https://doi.org/10.5281/zenodo.4320487}
 }
 ```
 

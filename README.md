@@ -21,7 +21,7 @@ Because models are large files, only Markdown is kept in this repository. Find t
   month        = dec,
   year         = 2020,
   publisher    = {Zenodo},
-  version      = {v0...0},
+  version      = {v0.3.0},
   doi          = {10.5281/zenodo.4320487},
   url          = {https://doi.org/10.5281/zenodo.4320487}
 }
